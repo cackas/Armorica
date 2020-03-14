@@ -1,0 +1,267 @@
+@import "bourbon"
+@import "vars.sass"
+
+//Load Libs SASS
+@import "app/libs/animate/animate.sass"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//Custom Styles Here
+body
+	color: #01161E
+ul
+	list-style: none
+	padding: 0
+	margin: 0
+.block
+	margin: 0 8.33vw
+.flex
+	display: flex
+.flex--row
+	flex-direction: row
+.flex--column
+	flex-direction: column
+.img--response
+	width: 100%
+	height: auto
+//Header Styles
+header
+	position: relative
+.header__top.open
+	.head__left
+		max-width: 100%
+		padding: 2.78vw 8.33vw 2.78vw 
+		.menu,.menu-btn
+			display: none
+		.menu-close
+			display: inherit
+	.head__right
+		display: none
+	& + .header__content
+		.content__right
+			display: none		
+		.open-menu-wrap
+			display: inherit
+.open-menu-wrap
+	display: none
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 1
+.open-menu
+	background-color: #fff
+	background-image: url(../img/main-bg.svg)
+	background-repeat: no-repeat
+	background-size: 82.84vw 21.6vw
+	background-position: 8.37vw bottom
+	position: relative
+	width: 100%
+	justify-content: space-between
+	align-items: flex-start
+	padding: 6.94vw 8.33vw 0
+.open-open__list
+	&>li
+		margin-bottom: 2.78vw
+		&>a
+			font-family: "IbmplexsansMedium"
+			font-size: 2.5vw
+			line-height: 3.26vw
+			font-weight: 500
+			color: #01161E
+.head__left, .head__right
+	align-items: center
+	justify-content: space-between
+	width: 100%
+	box-shadow: inset 0px -1px 0px 0px rgba(#F1F9F7, 1)
+.logo
+	display: block
+	width: 7vw
+	margin-right: 6.93vw
+.link
+	display: block
+.menu
+	margin-right: 5.76vw
+	li
+		margin-right: 3.75vw
+		&:last-child
+			margin-right: 0
+	.link
+		color: #01161E
+		font-size: 1.11vw
+		line-height: 1.45vw
+.menu-btn
+	width: 1.67vw
+.menu-close
+	display: none
+.menu-close-wrap
+	align-items: center
+	opacity: .45
+.menu-close__text
+	font-family: "IbmplexsansBold"
+	text-transform: uppercase
+	font-size: .97vw
+	line-height: 1.38vw
+	margin-right: .97vw
+	color: #01161E
+.menu-close__img
+	width: 1.67vw
+.btn
+	width: fit-content
+	font-family: "IbmplexsansBold"
+	font-size: .97vw
+	line-height: 1.38vw
+	padding: .97vw 1.94vw
+	text-transform: uppercase
+	background-color: #019771
+	color: #fff
+.affiliate-btn
+	background-color: #019771
+	color: #fff
+.affiliate-btn.inverse
+	background-color: #fff
+	color: #019771
+.advertiser-btn
+	color: #019771
+	background-color: #fff
+.advertiser-btn.inverse
+	color: #fff
+	background-color: #019771
+.signin-btn
+	width: 1.8vw
+//Header main Screen
+.main-screen--left
+	max-width: 58.33%
+	padding: 2.78vw 6.59vw 2.78vw 8.33vw
+.main-screen--right
+	max-width: 41.66%
+	padding: 2.78vw 8.33vw 2.78vw 5.55vw
+	background-color: #019771
+	box-shadow: none
+//Header under menu Styles
+.content__left
+	position: relative
+	max-width: 58.33%
+	padding: 6.25vw 0 9.16vw 8.33vw
+.stats-wrap
+	margin-bottom: 2.833vw
+	flex-wrap: wrap
+.stat-wrap
+	margin-right: 4.86vw
+	margin-bottom: 3vw
+.stat__number
+	font-family: "IbmplexsansBold"
+	font-size: 2.5vw
+	line-height: 3.26vw
+	margin-right: .694vw
+.stat__title
+	font-family: "IbmplexsansLight"
+	font-size: 1.11vw
+	line-height: 1.45vw
+	margin-right: .694vw
+.stat--main
+	margin-bottom: 4.16vw
+	.stat__number
+		font-size: 6.67vw
+		line-height: 8vw
+		margin-bottom: 1.11vw
+		color: #019771
+	.stat__title
+		font-size: 1.388vw
+		line-height: 1.8vw
+.content__right
+	position: relative
+	max-width: 41.66%
+	width: 100%
+	padding: 7.22vw 5.55vw 0
+	background-color: #019771
+.header__pretitle
+	font-family: "IbmplexsansSemiBold"
+	font-size: 1.11vw
+	line-height: 1.45vw
+	margin-bottom: 1.388vw
+	color: rgba(#fff,.75)
+	text-transform: uppercase
+.header__title
+	font-family: "IbmplexsansSemiBold"
+	font-size: 2.22vw
+	line-height: 3vw
+	margin-bottom: 2.78vw
+	color: #fff
+.header__descr
+	font-family: "IbmplexsansRegular"
+	font-size: 1.38vw
+	line-height: 2.22vw
+	color: #FEFEFE
+.header__content
+	background-image: url(../img/main-bg.svg)
+	background-repeat: no-repeat
+	background-size: 82.84vw 21.6vw
+	background-position: 8.37vw bottom
+	position: relative
+.line
+	position: absolute
+	height: 100%
+	width: 1px
+	background-color: #F1F9F7
+	top: 0
+.line.first
+	left: 8.33vw
+.line.second
+	left: 36.11vw
+.line.third
+	left: 63.9vw
+.line.fourth
+	left: inherit
+	right: 8.33vw
+.link-wrap
+	margin-bottom: 2.78vw
+	&:nth-child(2)
+		margin-bottom: 4.86vw
+.link-content
+	font-family: "IbmplexsansBold"
+	font-size: 2.22vw
+	line-height: 2.91vw
+	margin-bottom: .69vw
+	color: #01161E
+.link-title
+	font-family: "IbmplexsansLight"
+	font-size: 1.11vw
+	line-height: 1.45vw
+	color: #01161E
+.social-list
+	margin-bottom: 5.48vw
+	li
+		margin-right: 1.38vw
+		&:last-child
+			margin-right: 0
+		a
+			width: 3.33vw
+.open-menu__btns-wrap
+	align-items: center
+	.btns-wrap
+		margin-right: 1.59vw
+//ALWAYS END
+@import "media"
