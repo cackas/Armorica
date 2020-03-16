@@ -25,20 +25,39 @@ $(function() {
 		return false;
 	});
 
-	//Menu open/close
-	menuOpenClose();
+	//Menu,popups open/close
+	close();
+	menuOpen();
+	affiliateOpen();
 
-	function menuOpenClose(){
+	function close(){
 		
-		$('#menu-open').click(function(e){
-			e.preventDefault();
-			$('.header__top').addClass('open');
-		})
 		$('#menu-close').click(function(e){
 			e.preventDefault();
 			$('.header__top').removeClass('open');
+			$('#menu-popup').removeClass('open');
+			$('#affiliate-popup').removeClass('open');
 		})
 
 	}
 
+	function menuOpen(){
+		
+		$('#menu-open').click(function(e){
+			e.preventDefault();
+			$('.header__top').addClass('open');
+			$('#menu-popup').addClass('open');
+		})
+
+	}
+
+	function affiliateOpen(){
+		
+		$('#affiliate-btn').click(function(e){
+			e.preventDefault();
+			$('.header__top').addClass('open');
+			$('#affiliate-popup').addClass('open');
+		})
+
+	}
 });

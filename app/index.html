@@ -65,7 +65,7 @@
 			</div>
 			<div class="head__right main-screen--right flex flex--row">
 				<div class="btns-wrap flex flex--row">
-					<a href="#" class="btn affiliate-btn inverse">JOIN AS affiliate</a>
+					<a href="#" id="affiliate-btn" class="btn affiliate-btn inverse">JOIN AS affiliate</a>
 					<a href="#" class="btn advertiser-btn inverse">AS advertiser</a>
 				</div>
 				<a href="#" class="signin-btn hidden"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
@@ -77,49 +77,6 @@
 			<div class="line second"></div>
 			<div class="line third"></div>
 			<div class="line fourth"></div>
-			<div class="open-menu-wrap">
-				<div class="open-menu flex flex--row">
-					<div class="line first"></div>
-					<div class="line second"></div>
-					<div class="line third"></div>
-					<div class="line fourth"></div>
-					<div class="open-menu__left">
-						<ul class="open-open__list flex flex--column">
-							<li><a href="#">Affiliates</a></li>
-							<li><a href="#">Advertises</a></li>
-							<li><a href="#">Programs</a></li>
-							<li><a href="#">Testimonials</a></li>
-							<li><a href="#">Who we are</a></li>
-							<li><a href="#">Get in touch</a></li>
-						</ul>
-					</div>
-					<div class="open-menu__right flex flex--column">
-						<div class="link-wrap flex flex--column">
-							<a class="link-content" href="tel:+18558946578">+1 855-894-6578</a>
-							<div class="link-title">Need a support? Give us a call!</div>
-						</div>
-						<div class="link-wrap flex flex--column">
-							<a class="link-content" href="mailto:info@armorica.network">info@armorica.network</a>
-							<div class="link-title">Feel free to send us a message</div>
-						</div>
-						<ul class="social-list flex flex--row">
-							<li><a href="#"><img src="img/LinkedIn.svg" alt="LinkedIn" class="img--response"></a></li>
-							<li><a href="#"><img src="img/Facebook.svg" alt="Facebook" class="img--response"></a></li>
-							<li><a href="#"><img src="img/Telegram.svg" alt="Telegram" class="img--response"></a></li>
-							<li><a href="#"><img src="img/Twitter.svg" alt="Twitter" class="img--response"></a></li>
-							<li><a href="#"><img src="img/Instagram.svg" alt="Instagram" class="img--response"></a></li>
-						</ul>
-						<div class="open-menu__btns-wrap flex flex--row">
-							<div class="btns-wrap flex flex--row">
-								<a href="#" class="btn affiliate-btn">JOIN AS affiliate</a>
-								<a href="#" class="btn advertiser-btn">AS advertiser</a>
-							</div>
-							<a href="#" class="signin-btn"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
-							<a href="#" class="signin-btn hidden"><img src="img/LogInBtnWhite.svg" alt="LogInBtn" class="img--response"></a>
-						</div>
-					</div>
-				</div>
-			</div>
 			<div class="content__left flex flex--column">
 				<div class="stats-wrap flex flex--row">
 					<div class="stat-wrap flex flex--column stat--main">
@@ -157,6 +114,115 @@
 				<div class="header__pretitle">eCommerce Affiliate Program</div>
 				<div class="header__title">Promote high-converting cost-per-action campaigns from hundreds of advertisers seeking your blogging, media-buying, social media, and e-mail marketing expertise.</div>
 				<div class="header__descr">Our managers are working non-stop to find the most favourable terms among the best converting projects. We hold out dozens of brands in eCommerce across the world.</div>
+			</div>
+			<div id="menu-popup" class="open-menu-wrap">
+				<div class="open-menu flex flex--row">
+					<div class="open-menu__left">
+						<ul class="open-open__list flex flex--column">
+							<li class="parent-link">
+								<a href="#">Affiliates</a>
+								<ul class="sub-menu flex flex--column">
+									<li><a href="#">Dashboard</a></li>
+									<li><a href="#">Tools</a></li>
+									<li><a href="#">Business Models</a></li>
+									<li><a href="#">Rules</a></li>
+									<li><a href="#">Help Center</a></li>
+								</ul>
+							</li>
+							<li class="parent-link">
+								<a href="#">Advertises</a>
+								<ul class="sub-menu flex flex--column">
+									<li><a href="#">Dashboard</a></li>
+									<li><a href="#">Tools</a></li>
+									<li><a href="#">Business Models</a></li>
+									<li><a href="#">Rules</a></li>
+									<li><a href="#">Help Center</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Programs</a></li>
+							<li><a href="#">Testimonials</a></li>
+							<li><a href="#">Who we are</a></li>
+							<li><a href="#">Get in touch</a></li>
+						</ul>
+					</div>
+					<div class="open-menu__right flex flex--column">
+						<div class="link-wrap flex flex--column">
+							<a class="link-content" href="tel:+18558946578">+1 855-894-6578</a>
+							<div class="link-title">Need a support? Give us a call!</div>
+						</div>
+						<div class="link-wrap flex flex--column">
+							<a class="link-content" href="mailto:info@armorica.network">info@armorica.network</a>
+							<div class="link-title">Feel free to send us a message</div>
+						</div>
+						<ul class="social-list flex flex--row">
+							<li><a href="#"><img src="img/LinkedIn.svg" alt="LinkedIn" class="img--response"></a></li>
+							<li><a href="#"><img src="img/Facebook.svg" alt="Facebook" class="img--response"></a></li>
+							<li><a href="#"><img src="img/Telegram.svg" alt="Telegram" class="img--response"></a></li>
+							<li><a href="#"><img src="img/Twitter.svg" alt="Twitter" class="img--response"></a></li>
+							<li><a href="#"><img src="img/Instagram.svg" alt="Instagram" class="img--response"></a></li>
+						</ul>
+						<div class="open-menu__btns-wrap flex flex--row">
+							<div class="btns-wrap flex flex--row">
+								<a href="#" id="affiliate-btn" class="btn affiliate-btn">JOIN AS affiliate</a>
+								<a href="#" class="btn advertiser-btn">AS advertiser</a>
+							</div>
+							<a href="#" class="signin-btn"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
+							<a href="#" class="signin-btn hidden"><img src="img/LogInBtnWhite.svg" alt="LogInBtn" class="img--response"></a>
+						</div>
+					</div>
+				</div>
+				<div class="line first"></div>
+				<div class="line second"></div>
+				<div class="line third"></div>
+				<div class="line fourth"></div>
+			</div>
+			<div id="affiliate-popup"class="open-menu-wrap">
+				<form class="affiliate-popup flex flex--column">
+					<div class="line first"></div>
+					<div class="line second"></div>
+					<div class="line third"></div>
+					<div class="line fourth"></div>
+					<div class="affiliate__pretitle">Join as affiliate</div>
+					<div class="affiliate__title">You have traffic, right? Join our afilliate<br>network and start making money of it.</div>
+					<div class="affiliate__form flex flex--column">
+						<div class="form__title">Fill the form below</div>
+						<div class="form_inputs flex flex--row">
+							<div class="inputs-column flex flex--column">
+								<input type="text" class="input--text" placeholder="First name">
+								<input type="text" class="input--text" placeholder="Last name">
+								<input type="text" class="input--text" placeholder="E-mail">
+								<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
+								<label for="form-password"></label>
+							</div>
+							<div class="inputs-column flex flex--column">
+								<input type="text" class="input--text" placeholder="Login">
+								<input type="text" class="input--text" placeholder="Link messenger">
+							</div>
+							<div class="inputs-column flex flex--column">
+
+								<input id="terms-input" type="checkbox" class="input--checkbox" name="terms">
+								<label for="terms-input" class="input-label flex flex--row">
+									<span class="label__box"></span>
+									<span class="label__title">I agree with Terms for <a class="accent" href="#">Affiliates</a> and <a class="accent" href="#">Privacy Policy</a> in the ARMORICA network and consent to the processing of my personal data</span>
+								</label>
+
+								<input id="notifications-input" type="checkbox" class="input--checkbox" name="email-notifications">
+								<label for="notifications-input" class="input-label flex flex--row">
+									<span class="label__box"></span>
+									<span class="label__title">I agree to receive email notifications about affiliate programs, coupons and deals, finance updates and ARMORICA news</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="form__submit-wrap flex flex--row">
+						<div class="btns-wrap flex flex--row">
+							<a href="#" id="form-submit" class="btn affiliate-btn opacity">JOIN AS affiliate</a>
+							<a href="#" class="btn advertiser-btn inverse hidden">AS advertiser</a>
+						</div>
+						<a href="#" class="signin-btn"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
+						<a href="#" class="signin-btn hidden"><img src="img/LogInBtnWhite.svg" alt="LogInBtn" class="img--response"></a>						
+					</div>
+				</form>
 			</div>
 		</div>
 	</header>
