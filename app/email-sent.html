@@ -277,13 +277,13 @@
 				</div>
 			</form>
 		</div>
-		<div id="log-in-popup" class="log-in-wrap">
+		<div id="log-in-popup" class="log-in-wrap open">
 			<div class="log-in-popup flex flex--row">
 				<div class="log-in__left">
 					<div class="grey-bg"></div>
 				</div>
 				<div class="log-in__right">
-					<div class="log-in open">
+					<div class="log-in">
 						<div class="log-in__top flex flex--row">
 							<div class="not-reg-wrap flex flex--row">
 								<a href="#" class="log-in-btn accent">Sign up</a>
@@ -343,6 +343,50 @@
 								</div>
 								<a href="#" id="log-in-form-btn" class="btn affiliate-btn log-in-form-btn">Send message</a>
 								<span class="submit-info">To make sure your account’s secure, we will send  you a message with your login and attach a link to update your current password.</span>								
+							</div>
+						</form>
+					</div>
+					<div class="change-pass">
+						<div class="log-in__top flex flex--row">
+							<div class="not-reg-wrap flex flex--row">
+								<a href="#" class="log-in-btn accent">Sign up</a>
+								<span class="not-reg">If you are not registered yet</span>
+							</div>
+							<div class="close--log-in">
+								<img src="img/menu-close.svg" alt="log in close" class="img--response">
+							</div>
+						</div>
+						<a href="#" id="pretitle--change-pass" class="affiliate__pretitle pretitle--log-in pretitle--forget-pass"><img src="img/arrow-left.svg" alt="arrow left"><span>Log in</span></a>
+						<div class="affiliate__title title--log-in">Reset password</div>
+						<form class="flex flex--column">
+							<div class="affiliate__form flex flex--column">
+								<div class="form__title">Create a new password</div>
+								<div class="form_inputs flex flex--row">
+									<div class="inputs-column flex flex--column">
+										<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
+									</div>
+								</div>
+								<a href="#" id="log-in-form-btn" class="btn affiliate-btn log-in-form-btn">Save Changes</a>
+								<span class="submit-info">It’s a good idea to use a strong password<br>that you’re not using elsewhere.</span>								
+							</div>
+						</form>
+					</div>
+					<div class="email-sent open">
+						<div class="log-in__top flex flex--row">
+							<div class="not-reg-wrap flex flex--row">
+								<a href="#" class="log-in-btn accent">Sign up</a>
+								<span class="not-reg">If you are not registered yet</span>
+							</div>
+							<div class="close--log-in">
+								<img src="img/menu-close.svg" alt="log in close" class="img--response">
+							</div>
+						</div>
+						<div class="affiliate__pretitle pretitle--log-in">E-mail sent!</div>
+						<div class="affiliate__title title--log-in">Please,<br>check your e-mail.</div>
+						<form class="flex flex--column">
+							<div class="affiliate__form flex flex--row">
+								<a href="#" id="email-sent-ok-btn" class="btn affiliate-btn email-sent-ok-btn">Okay</a>
+								<a href="#" id="email-sent-btn" class="btn advertiser-btn email-sent-btn">Try to log in</a>
 							</div>
 						</form>
 					</div>

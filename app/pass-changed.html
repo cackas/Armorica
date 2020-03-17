@@ -27,8 +27,13 @@
 	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
 	<script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
 
-	<!-- Load CSS Compiled without JS -->
-	<link rel="stylesheet" href="css/fonts.min.css">
+	<!-- Load CSS Start
+	<script>loadLocalStorageCSS( "webfonts", "css/fonts.min.css?ver=1.0.0" );</script>
+	<script>loadCSS( "css/header.min.css?ver=1.0.0", false, "all" );</script>
+	<script>loadCSS( "css/main.min.css?ver=1.0.0", false, "all" );</script>
+	Load CSS End -->
+
+    <link rel="stylesheet" href="css/fonts.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
@@ -277,13 +282,13 @@
 				</div>
 			</form>
 		</div>
-		<div id="log-in-popup" class="log-in-wrap">
+		<div id="log-in-popup" class="log-in-wrap open">
 			<div class="log-in-popup flex flex--row">
 				<div class="log-in__left">
 					<div class="grey-bg"></div>
 				</div>
 				<div class="log-in__right">
-					<div class="log-in open">
+					<div class="log-in">
 						<div class="log-in__top flex flex--row">
 							<div class="not-reg-wrap flex flex--row">
 								<a href="#" class="log-in-btn accent">Sign up</a>
@@ -343,6 +348,68 @@
 								</div>
 								<a href="#" id="log-in-form-btn" class="btn affiliate-btn log-in-form-btn">Send message</a>
 								<span class="submit-info">To make sure your account’s secure, we will send  you a message with your login and attach a link to update your current password.</span>								
+							</div>
+						</form>
+					</div>
+					<div class="change-pass">
+						<div class="log-in__top flex flex--row">
+							<div class="not-reg-wrap flex flex--row">
+								<a href="#" class="log-in-btn accent">Sign up</a>
+								<span class="not-reg">If you are not registered yet</span>
+							</div>
+							<div class="close--log-in">
+								<img src="img/menu-close.svg" alt="log in close" class="img--response">
+							</div>
+						</div>
+						<a href="#" id="pretitle--change-pass" class="affiliate__pretitle pretitle--log-in pretitle--forget-pass"><img src="img/arrow-left.svg" alt="arrow left"><span>Log in</span></a>
+						<div class="affiliate__title title--log-in">Reset password</div>
+						<form class="flex flex--column">
+							<div class="affiliate__form flex flex--column">
+								<div class="form__title">Create a new password</div>
+								<div class="form_inputs flex flex--row">
+									<div class="inputs-column flex flex--column">
+										<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
+									</div>
+								</div>
+								<a href="#" id="log-in-form-btn" class="btn affiliate-btn log-in-form-btn">Save Changes</a>
+								<span class="submit-info">It’s a good idea to use a strong password<br>that you’re not using elsewhere.</span>								
+							</div>
+						</form>
+					</div>
+					<div class="email-sent">
+						<div class="log-in__top flex flex--row">
+							<div class="not-reg-wrap flex flex--row">
+								<a href="#" class="log-in-btn accent">Sign up</a>
+								<span class="not-reg">If you are not registered yet</span>
+							</div>
+							<div class="close--log-in">
+								<img src="img/menu-close.svg" alt="log in close" class="img--response">
+							</div>
+						</div>
+						<div class="affiliate__pretitle pretitle--log-in">E-mail sent!</div>
+						<div class="affiliate__title title--log-in">Please,<br>check your e-mail.</div>
+						<form class="flex flex--column">
+							<div class="affiliate__form flex flex--row">
+								<a href="#" id="email-sent-ok-btn" class="btn affiliate-btn email-sent-ok-btn">Okay</a>
+								<a href="#" id="email-sent-btn" class="btn advertiser-btn email-sent-btn">Try to log in</a>
+							</div>
+						</form>
+					</div>
+					<div class="pass-changed open">
+						<div class="log-in__top flex flex--row">
+							<div class="not-reg-wrap flex flex--row">
+								<a href="#" class="log-in-btn accent">Sign up</a>
+								<span class="not-reg">If you are not registered yet</span>
+							</div>
+							<div class="close--log-in">
+								<img src="img/menu-close.svg" alt="log in close" class="img--response">
+							</div>
+						</div>
+						<div class="affiliate__pretitle pretitle--log-in">Password’ve been changed!</div>
+						<div class="affiliate__title title--log-in">Please, log in<br>with a new password.</div>
+						<form class="flex flex--column">
+							<div class="affiliate__form flex flex--row">
+								<a href="#" id="pass-changed-btn" class="btn affiliate-btn">Log in</a>
 							</div>
 						</form>
 					</div>
