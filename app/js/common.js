@@ -117,5 +117,10 @@ $(function() {
 		})
 		
 	}
-
+//Brands slider
+$('.brands-slider').slick({
+	slidesToShow: 4,
+	slidesToScroll: 1
+  });
+//End brands slider
 });
