@@ -131,7 +131,34 @@ $(function() {
 //Brands slider
 $('.brands-slider').slick({
 	slidesToShow: 4,
-	slidesToScroll: 1
+	slidesToScroll: 1,
+	arrows: false,
+	dots: false
   });
 //End brands slider
+
+//News slider
+let $el = $('.page-numbers');
+$('.news-slider').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: false,
+	dots: false
+});
+
+$(".news-slider").on("init", function(event, slick){
+	$el.append('<div class="current-page">'+ parseInt(slick.currentSlide + 1, 10) +'</div><div class="slash">/</div><div class="amount-pages">'+ slick.slideCount +'</div>');
+});
+$(".news-slider").on("afterChange", function(event, slick, currentSlide){
+    $el.find('.current-page').html(parseInt(slick.currentSlide + 1));
+});
+
+$('.left-arrow').click(function(){
+	$('.news-slider').slick('slickPrev');
+})
+  
+$('.right-arrow').click(function(){
+	$('.news-slider').slick('slickNext');
+})
+//End News slider
 });
