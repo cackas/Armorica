@@ -129,16 +129,33 @@ $(function() {
 		
 	}
 //Brands slider
+let $brands = $('.page-numbers--brands');
 $('.brands-slider').slick({
 	slidesToShow: 4,
 	slidesToScroll: 1,
 	arrows: false,
 	dots: false
   });
+
+$(".brands-slider").on("init reInit", function(event, slick){
+	$brands.find('#brands-amount-pages').html(parseInt(slick.slideCount));
+});
+
+$(".brands-slider").on("afterChange", function(event, slick, currentSlide){
+	$brands.find('#brands-current-page').html(parseInt(slick.currentSlide + 1));
+});
+  
+$('#brands-arrow-left').click(function(){
+	$('.brands-slider').slick('slickPrev');
+})
+	
+$('#brands-arrow-right').click(function(){
+	$('.brands-slider').slick('slickNext');
+})
 //End brands slider
 
 //News slider
-let $el = $('.page-numbers');
+let $news = $('.page-numbers--news');
 $('.news-slider').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
@@ -146,18 +163,19 @@ $('.news-slider').slick({
 	dots: false
 });
 
-$(".news-slider").on("init", function(event, slick){
-	$el.append('<div class="current-page">'+ parseInt(slick.currentSlide + 1, 10) +'</div><div class="slash">/</div><div class="amount-pages">'+ slick.slideCount +'</div>');
-});
-$(".news-slider").on("afterChange", function(event, slick, currentSlide){
-    $el.find('.current-page').html(parseInt(slick.currentSlide + 1));
+$(".news-slider").on("init reInit", function(event, slick){
+	$news.find('#amount-pages').html(parseInt(slick.slideCount));
 });
 
-$('.left-arrow').click(function(){
+$(".news-slider").on("afterChange", function(event, slick, currentSlide){
+    $news.find('#current-page').html(parseInt(slick.currentSlide + 1));
+});
+
+$('#news-arrow-left').click(function(){
 	$('.news-slider').slick('slickPrev');
 })
   
-$('.right-arrow').click(function(){
+$('#news-arrow-right').click(function(){
 	$('.news-slider').slick('slickNext');
 })
 //End News slider
