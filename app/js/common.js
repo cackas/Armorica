@@ -129,30 +129,57 @@ $(function() {
 		
 	}
 //Brands slider
-let $brands = $('.page-numbers--brands');
-$('.brands-slider').slick({
+let $brands = $('#page-numbers--brands');
+$('#brands-slider').slick({
 	slidesToShow: 4,
 	slidesToScroll: 1,
 	arrows: false,
 	dots: false
   });
 
-$(".brands-slider").on("init reInit", function(event, slick){
+$("#brands-slider").on("init reInit", function(event, slick){
 	$brands.find('#brands-amount-pages').html(parseInt(slick.slideCount));
 });
 
-$(".brands-slider").on("afterChange", function(event, slick, currentSlide){
+$("#brands-slider").on("afterChange", function(event, slick, currentSlide){
 	$brands.find('#brands-current-page').html(parseInt(slick.currentSlide + 1));
 });
   
 $('#brands-arrow-left').click(function(){
-	$('.brands-slider').slick('slickPrev');
+	$('#brands-slider').slick('slickPrev');
 })
 	
 $('#brands-arrow-right').click(function(){
-	$('.brands-slider').slick('slickNext');
+	$('#brands-slider').slick('slickNext');
 })
 //End brands slider
+
+//Advertises slider
+let $advertises = $('#page-numbers--advertises');
+$('#advertises-slider').slick({
+	slidesToShow: 3,
+	rows: 2,
+	slidesToScroll: 1,
+	arrows: false,
+	dots: false
+  });
+
+$("#advertises-slider").on("init reInit", function(event, slick){
+	$advertises.find('#brands-amount-pages').html(parseInt(slick.slideCount));
+});
+
+$("#advertises-slider").on("afterChange", function(event, slick, currentSlide){
+	$advertises.find('#brands-current-page').html(parseInt(slick.currentSlide + 1));
+});
+  
+$('#brands-arrow-left').click(function(){
+	$('#advertises-slider').slick('slickPrev');
+})
+	
+$('#brands-arrow-right').click(function(){
+	$('#advertises-slider').slick('slickNext');
+})
+//End advertises slider
 
 //News slider
 let $news = $('.page-numbers--news');

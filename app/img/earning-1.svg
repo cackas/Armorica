@@ -1,0 +1,20 @@
+<svg width="106" height="125" viewBox="0 0 106 125" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.3">
+<rect x="2" y="37" width="9" height="9" fill="#019771"/>
+<rect x="74" y="94" width="7" height="7" fill="#019771"/>
+<rect x="59" width="7" height="7" fill="#019771"/>
+<rect x="104" y="8" width="2" height="2" fill="#019771"/>
+</g>
+<g opacity="0.1">
+<rect x="18" y="100" width="8" height="8" fill="#01161E"/>
+<rect x="84" y="37" width="5" height="5" fill="#01161E"/>
+<rect y="122" width="3" height="3" fill="#01161E"/>
+<rect x="32" y="53" width="21" height="21" fill="#01161E"/>
+</g>
+<path d="M62 46.7H54V48.3L62 48.3V46.7Z" fill="#019771"/>
+<path d="M34 46.7H26V48.3L34 48.3V46.7Z" fill="#019771"/>
+<path d="M44.8002 38L44.8002 30H43.2002L43.2002 38H44.8002Z" fill="#019771"/>
+<path d="M44.8002 66L44.8002 58H43.2002V66H44.8002Z" fill="#019771"/>
+<circle cx="43.9998" cy="48" r="9.655" fill="#FEFEFE" stroke="#01161E" stroke-width="1.61"/>
+<path d="M44.8 43.2H43.2L43.2 47.2H39.2V48.8H43.2L43.1999 52.8H44.8L44.8 48.8H48.8V47.2H44.8L44.8 43.2Z" fill="#019771"/>
+</svg>

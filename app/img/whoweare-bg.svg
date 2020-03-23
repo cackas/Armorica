@@ -1,13 +1,10 @@
-<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="960" viewBox="0 0 1440 960" fill="none">
 <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="-1" width="1440" height="961">
 <rect x="1440" width="960" height="1440" transform="rotate(90 1440 0)" fill="#019771"/>
 </mask>
 <g mask="url(#mask0)">
 <rect x="1440" y="0.00012207" width="960" height="1440" transform="rotate(90 1440 0.00012207)" fill="#019771"/>
 <line x1="120.5" y1="0.000122077" x2="120.5" y2="960" stroke="#00926D"/>
-<line x1="520.5" y1="0.000122077" x2="520.5" y2="960" stroke="#00926D"/>
-<line x1="920.5" y1="0.000122077" x2="920.5" y2="960" stroke="#00926D"/>
-<line x1="1320.5" y1="0.000122077" x2="1320.5" y2="960" stroke="#008F6A"/>
 <path d="M1369 69.1999H1299V138.8H1369V69.1999Z" fill="#099A75"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1159 278V-70H1509V278H1159ZM1229 208.4H1439V-0.399811H1229V208.4Z" fill="#099A75"/>
 </g>
