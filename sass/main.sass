@@ -42,6 +42,9 @@ body
 	overflow-x: hidden
 	&.overflow-stop
 		overflow: hidden
+a,a:hover,a:active
+	color: #01161E
+	text-decoration: none
 ul
 	list-style: none
 	padding: 0
@@ -115,9 +118,6 @@ header
 			color: #01161E
 			min-width: 18.19vw
 			position: relative
-			&:hover,&:active
-				text-decoration: none
-				color: #019771
 	&>li.parent-link
 		&>a
 			&:after				
@@ -190,6 +190,7 @@ header
 .menu-close__img
 	width: 1.67vw
 .btn
+	display: block
 	width: max-content
 	font-family: "IbmplexsansBold"
 	font-size: .97vw
@@ -377,7 +378,7 @@ header
 	line-height: 1.25vw
 	border: 1px solid rgba(1, 22, 30, 0.07)
 	margin-bottom: .69vw
-	&:last-of-type
+	&:last-child
 		margin-bottom: 0
 .form__submit-wrap
 	align-items: center
@@ -534,13 +535,16 @@ header
 	font-size: 1.67vw
 	line-height: 2.15vw
 	margin-right: 15.28vw
+	color: 
 .land__menu
 	li
+		margin-right: 2.78vw
 		.land-link
+			display: block
+			width: max-content
 			font-family: "IbmplexsansRegular"
 			font-size: 1.25vw
 			line-height: 1.59vw
-			margin-right: 2.78vw
 			color: #01161E
 			opacity: .75
 			&.active
@@ -548,7 +552,6 @@ header
 				font-family: "IbmplexsansSemiBold"
 				opacity: 1
 			&:hover,&:active
-				text-decoration: none
 				font-family: "IbmplexsansSemiBold"
 				opacity: 1
 			&:last-child
@@ -615,7 +618,6 @@ header
 	&:last-child
 		margin-right: 0
 	&:hover,&:active,&:link
-		text-decoration: none
 		color: #01161E
 .brand__top
 	align-items: center
@@ -759,9 +761,6 @@ header
 	line-height: 1.38vw
 	color: #019771
 	text-transform: uppercase
-	&:hover,&:active
-		color: #019771
-		text-decoration: none
 
 .left-arrow,.right-arrow
 	width: 2vw
@@ -931,7 +930,6 @@ header
 	margin-bottom: 2.78vw
 	outline: none
 	&:hover,&:active
-		text-decoration: none
 		outline: none
 .advertises-slide__left
 	width: 9.72vw
@@ -975,5 +973,330 @@ header
 	background-position: 31.94vw 15.13vw
 	background-size: 59.7vw 41.67vw
 //Advertises slyder styles end
+
+//Filter styles
+.filter-wrap
+	align-items: flex-start
+	padding: 0 8.33vw 6.94vw
+.filter__left
+	width: 23.61vw
+	margin-right: 3.7vw
+.main-filter
+	font-family: "IbmplexsansBold"
+	font-size: 1.38vw
+	line-height: 1.8vw
+	margin-bottom: 2.78vw
+	img
+		width: .833vw
+.filter-group
+	margin-bottom: 4.16vw
+	&:last-child
+		margin-bottom: 0
+.filter--select
+	background-color: #F1F9F7
+	border: 1px solid #F1F9F7
+	font-family: "IbmplexsansMedium"
+	margin-bottom: 1.38vw
+.filter--text
+	font-family: "IbmplexsansSemiBold"
+	font-size: .97vw
+	line-height: 1.25vw
+	margin-bottom: .97vw
+	text-transform: uppercase
+.filter--text-type
+	margin-bottom: 1.38vw
+.filter--chekbox
+	align-items: center
+	.label__title
+		display: block
+		font-family: "IbmplexsansLight"
+		font-size: 1.11vw
+		line-height: 1.45vw
+		text-transform: none
+		transform: none
+		margin-right: .69vw
+	.label__amount
+		font-family: "IbmplexsansSemiBold"
+		font-size: .97vw
+		line-height: 1.25vw
+		margin-right: .97vw
+		opacity: .3
+	.label__img
+		width: .55vw
+.subinputs-wrap
+	display: none
+	margin-bottom: 1.38vw
+	padding-left: 1.73vw
+	&.active
+		display: inherit
+.programs-block
+	padding-left: 4.16vw 0
+	.land__menu-wrap
+		margin-bottom: 0
+
+.filter__nav
+	margin-bottom: 1vw
+	align-items: center
+	&:last-child
+		margin-bottom: 0
+.filter__numbers
+	align-items: center
+	margin-right: 5.41vw
+	.amount-pages,.slash
+		font-family: "IbmplexsansRegular"
+		font-size: 1.11vw
+		line-height: 1.45vw
+		opacity:.5
+	.current-page
+		align-items: center
+.filter-link
+	font-family: "IbmplexsansRegular"
+	font-size: 1.11vw
+	line-height: 1.45vw
+	margin-right: 1.38vw
+	color: #01161E
+	opacity:.5
+	&:hover,&:active,&.active
+		font-family: "IbmplexsansBold"
+		opacity: 1
+.filter__arrows
+	margin-right: 4.16vw
+.perpage-wrap
+	margin-right: 6.25vw
+.perpage__title
+	font-family: "IbmplexsansRegular"
+	font-size: 1.11vw
+	line-height: 1.45vw
+	margin-right: 1vw
+	opacity: .75
+	width: max-content
+.perpage__value
+	color: #019771
+	opacity: .75
+	font-family: "IbmplexsansBold"
+	font-size: 1.11vw
+	line-height: 1.45vw
+.found__title
+	font-family: "IbmplexsansRegular"
+	font-size: 1.11vw
+	line-height: 1.45vw
+	margin-right: 1vw
+	opacity: .75
+	width: max-content
+.found__value
+	opacity: .75
+	font-family: "IbmplexsansBold"
+	font-size: 1.11vw
+	line-height: 1.45vw
+.brands-items-wrap
+	margin-bottom: 4.16vw
+.brand-item
+	color: #01161E
+	background-color: #fff
+	margin-bottom: 2vw
+	&:last-child
+		margin-bottom: 0
+	.brand-slide
+		margin-right: 0
+.brand-item__right
+	width: 100%
+	padding: 2vw
+	border: 1px solid rgba(1,22,30,.1)
+	border-left: none
+.brand-item__title
+	font-family: "IbmplexsansSemiBold"
+	font-size: .97vw
+	line-height: 1.25vw
+	margin-bottom: 1.38vw
+	text-transform: uppercase
+.brand-item__values
+	font-size: 1.11vw
+	line-height: 1.45vw
+	margin-bottom: .83vw
+	align-items: center
+	justify-content: space-between
+.brand-item__key
+	font-family: "IbmplexsansMedium"
+	opacity: .4
+.brand-value__value
+	font-family: "IbmplexsansBold"
+	&.green
+		color: #019771
+.brand-item__group
+	margin-bottom: 2.78vw
+.show-btn
+	font-family: "IbmplexsansSemiBold"
+	font-size: 1.11vw
+	line-height: 1.45vw
+	color: #019771
+//Brand page styles
+.page-brand__content
+	.brand-slide
+		margin-right: 0
+		margin-bottom: 4.16vw
+		border: none
+		padding: 0
+	.brand-item__right
+		border: none
+		padding: 0
+.page-brand__left
+	margin-right: 4.16vw
+	width: 50.5vw
+.page-brand__title
+	font-family: "IbmplexsansBold"
+	font-size: 2.22vw
+	line-height: 2.91vw
+	margin-bottom: 2vw
+.page-brand__text
+	font-family: "IbmplexsansLight"
+	font-size: 1.38vw
+	line-height: 2.36vw
+	opacity: .9
+	margin-bottom: 2.78vw
+.page-brand__btn,.page-brand__img
+	margin-bottom: 4.16vw
+.page-brand__lists
+	margin-bottom: 2.78vw
+.lists--left
+	margin-right: 4.16vw
+.brand-page__list
+	margin-bottom: 2.78vw
+	&:last-child
+		margin-bottom: 0
+	li
+		font-family: "IbmplexsansLight"
+		font-size: 1.11vw
+		line-height: 1.94vw
+		margin-bottom: .69vw
+		opacity: .9
+		list-style-image: url(../img/list-style.svg)
+		list-style-position: inside
+	li.list__title
+		font-family: "IbmplexsansSemiBold"
+		font-size: 1.67vw
+		line-height: 2.15vw
+		margin-bottom: 1.38vw
+		opacity: 1
+		list-style-image: none
+.list__title
+	font-family: "IbmplexsansSemiBold"
+	font-size: 1.67vw
+	line-height: 2.15vw
+	margin-bottom: 1.38vw
+.brand-page-btn
+	font-family: "IbmplexsansSemiBold"
+	font-size: 1.11vw
+	line-height: 1.38vw
+	text-transform: uppercase
+	color: #019771
+
+//Support styles
+.topics_slider-wrap
+	margin-bottom: 4.16vw
+.topics__left
+	margin-right: 3.7vw
+.topic
+	margin-bottom: .69vw
+	&:last-child
+		margin-bottom: 0
+.topics__nav
+	justify-content: space-between
+.topics-wrap
+	margin-right: 8.33vw
+.faq-wrap
+	width: 24vw
+.faq_slider-wrap
+	margin-bottom: 7.5vw
+.faq-link
+	font-family: "IbmplexsansRegular"
+	font-size: 1.25vw
+	line-height: 1.67vw
+	margin-bottom: 2vw
+.faq__nav
+	justify-content: space-between
+//Support page styles
+.support-page__left
+	width: 63vw
+	margin-right: 5vw
+.support-search
+	margin-right: 3.7vw
+.support-page__text-wrap
+	padding-left: 8.33vw
+	padding-right: 4.16vw
+.support__notice-wrap
+	padding: 2.78vw 4.16vw 2.78vw 8.33vw
+	background-color: #F9FCFB
+	margin-bottom: 2.78vw
+.support__notice 
+	align-items: flex-start
+.support-page__menu-wrap
+	justify-content: space-between
+.code-text
+	padding: 2.78vw 2vw
+	border: 1px solid rgba(1, 22, 30, 0.1)
+	margin-bottom: 4.16vw
+.example-text
+	font-family: "IbmplexsansRegular"
+	font-size: 1.11vw
+	line-height: 1.94vw
+	margin-bottom: 1.38vw
+.list__pretitle
+	font-family: "IbmplexsansMedium"
+	font-size: 1.38vw
+	line-height: 1.8vw
+	margin-bottom: 2.78vw
+.table
+	margin-bottom: 2.78vw
+	width: 100%
+.table__titles
+	border-bottom: 1px solid rgba(1, 22, 30, 0.1)
+	.cell
+		font-family: "IbmplexsansSemiBold"
+		font-size: .97vw
+		line-height: 1.94vw
+		opacity: .6
+		text-transform: uppercase
+		span
+			text-transform: lowercase
+.cell
+	width: 9.12vw
+	min-width: 9.12vw
+	padding: 1.38vw 0
+	padding-right: 1.38vw
+	font-family: "IbmplexsansLight"
+	font-size: .97vw
+	line-height: 1.94vw
+	opacity: .9
+	&:last-child
+		width: -webkit-fill-available
+	&.bold
+		font-family: "IbmplexsansMedium"
+	&.total
+		font-family: "IbmplexsansSemiBold"
+		text-transform: uppercase
+	.italic
+		font-style: italic
+		font-family: "IbmplexsansLight"
+.anchor-link
+	font-family: "IbmplexsansRegular"
+	font-size: 1.25vw
+	line-height: 1.83vw
+	margin-bottom: 2vw
+	opacity: .75
+	&.active
+		color: #019771
+		opacity: 1
+.anchor-list__title
+	margin-bottom: 2.78vw
+.numeral__list
+	font-family: "IbmplexsansLight"
+	font-size: 1.11vw
+	line-height: 1.94vw
+	margin-bottom: 2.78vw
+	list-style: decimal
+	list-style-position: inside
+	li
+		margin-bottom: .69vw
 //ALWAYS END
+
 @import "media"
