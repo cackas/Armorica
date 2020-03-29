@@ -57,13 +57,13 @@
 					</div>
 				</a>
 			</div>
-			<div class="head__right main-screen--right flex flex--row">
+			<div class="head__right flex flex--row">
 				<div class="btns-wrap flex flex--row">
-					<a href="#" id="affiliate-btn" class="btn affiliate-btn inverse">JOIN AS affiliate</a>
-					<a href="#" id="advertiser-btn" class="btn advertiser-btn inverse">AS advertiser</a>
+					<a href="#" id="affiliate-btn" class="btn affiliate-btn">JOIN AS affiliate</a>
+					<a href="#" id="advertiser-btn" class="btn advertiser-btn">AS advertiser</a>
 				</div>
-				<a href="#" class="signin-btn hidden"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
-				<a href="#" class="signin-btn"><img src="img/LogInBtnWhite.svg" alt="LogInBtn" class="img--response"></a>
+				<a href="#" class="signin-btn"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
+				<a href="#" class="signin-btn hidden"><img src="img/LogInBtnWhite.svg" alt="LogInBtn" class="img--response"></a>
 			</div>			
 		</div>
 		<div id="menu-popup" class="open-menu-wrap">
@@ -572,11 +572,20 @@
                     <li><a href="affiliate-offers.html" class="land-link">Best offers</a></li>
                     <li><a href="affiliate-earning.html" class="land-link">Start earning</a></li>
                 </ul>
+                    <div class="dropdown">
+                        <button class="dropbtn flex--row flex"><span>We offer</span><img src="img/arrow-bottom-green.svg" alt=""></button>
+                        <div class="dropdown-content">
+                            <a href="affiliate-how-it-works.html" class="land-link">How it works</a>
+                            <a href="affiliate-offers.html" class="land-link">Best offers</a>
+                            <a href="affiliate-earning.html" class="land-link">Start earning</a>
+                        </div>
+                    </div>
+                
             </div>
             <div class="land__title block relative">
                 Monetize your traffic.<br>Earn more on visitors you already have.
             </div>
-            <div class="features-wrap flex flex--row block relative">
+            <div class="features-wrap flex flex--row block relative hidden--mob">
                 <div class="feature flex flex--row">
                     <img src="img/payout.svg" alt="payout" class="feature__img">
                     <div class="feature__content-wrap">
@@ -599,7 +608,7 @@
                     </div>
                 </div>
             </div>
-            <div class="features-wrap features-wrap--grey flex flex--row block relative">
+            <div class="features-wrap features-wrap--grey flex flex--row block relative hidden--mob">
                 <div class="feature flex flex--row">
                     <img src="img/real-time.svg" alt="payout" class="feature__img">
                     <div class="feature__content-wrap">
@@ -691,7 +700,15 @@
                     <li><a href="#" class="land-link">Conversion</a></li>
                     <li><a href="#" class="land-link">Trend</a></li>
                     <li><a href="#" class="land-link">Interest</a></li>
-                </ul>
+                </ul>                
+                <div class="dropdown">
+                    <button class="dropbtn flex--row flex"><span>All brands</span><img src="img/arrow-bottom-green.svg" alt=""></button>
+                    <div class="dropdown-content">
+                        <a href="#" class="land-link">Conversion</a>
+                        <a href="#" class="land-link">Trend</a>
+                        <a href="#" class="land-link">Interest</a>
+                    </div>
+                </div>
             </div>
             <div class="land__title relative block">
                 Top offers of the week
@@ -895,7 +912,7 @@
                 <a class="partner" href="#" style="width:7.78vw"><img class="img--response" src="img/af 3.svg" alt=""></a>
                 <a class="partner" href="#" style="width:7.78vw"><img class="img--response" src="img/af 6.svg" alt=""></a>
             </div>
-            <div class="partners__logos flex flex--row">
+            <div class="partners__logos flex flex--row partners__logos--mob">
                 <a class="partner" href="#"><img class="img--response" src="img/af 1.svg" alt=""></a>
                 <a class="partner" href="#"><img class="img--response" src="img/af 2.svg" alt=""></a>
                 <a class="partner" href="#"><img class="img--response" src="img/af 5.svg" alt=""></a>

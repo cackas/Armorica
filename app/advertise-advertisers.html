@@ -40,271 +40,522 @@
 		<div class="header__top flex flex--row">
 			<div class="head__left main-screen--left flex flex--row">
 				<a href="#" class="logo">
-					<img src="img/Logotype.svg" alt="Armorica" class="img--response">
+					<img src="img/Logotype.svg" alt="Armorica" class="img--response logo--desc">
+					<img src="img/logo-m.svg" alt="Armorica" class="img--response logo--mob">
 				</a>
 				<ul class="menu flex flex--row">
 					<li><a href="affiliate-we-offer.html" class="link">Affiliates</a></li>
 					<li><a href="advertise-we-offer.html" class="link">Advertises</a></li>
 					<li><a href="programs-brands.html" class="link">Programs </a></li>
 				</ul>
+				<a href="#" class="signin-btn signin-btn--mob"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
 				<a href="#" id="menu-open" class="menu-btn"><img src="img/Menu.svg" alt="menu-open" class="img--response"></a>
 				<a href="#" id="menu-close" class="menu-close">
 					<div class="menu-close-wrap flex flex--row">
-						<span class="menu-close__text">Close menu</span>
+						<span class="menu-close__text">Close <span>menu</span></span>
 						<img class="menu-close__img" src="img/menu-close.svg" alt="menu-close">
 					</div>
 				</a>
 			</div>
-			<div class="head__right head__right--white main-screen--right flex flex--row">
+			<div class="head__right flex flex--row">
 				<div class="btns-wrap flex flex--row">
 					<a href="#" id="affiliate-btn" class="btn affiliate-btn">JOIN AS affiliate</a>
 					<a href="#" id="advertiser-btn" class="btn advertiser-btn">AS advertiser</a>
 				</div>
 				<a href="#" class="signin-btn"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
 				<a href="#" class="signin-btn hidden"><img src="img/LogInBtnWhite.svg" alt="LogInBtn" class="img--response"></a>
+			</div>			
+		</div>
+		<div id="menu-popup" class="open-menu-wrap">
+			<div class="open-menu flex flex--row">
+				<div class="open-menu__left flex flex--column">
+					<ul class="open-open__list flex flex--column">
+						<li class="parent-link">
+							<a id="affiliates--mob" href="#">Affiliates</a>
+							<ul class="sub-menu flex flex--column">								
+								<li><a href="#">Dashboard</a></li>
+								<li><a href="#">Tools</a></li>
+								<li><a href="#">Business Models</a></li>
+								<li><a href="#">Rules</a></li>
+								<li><a href="#">Help Center</a></li>
+							</ul>
+						</li>
+						<li class="parent-link">
+							<a id="advertises--mob" href="#">Advertises</a>
+							<ul class="sub-menu flex flex--column">
+								<li><a href="#">Dashboard</a></li>
+								<li><a href="#">Tools</a></li>
+								<li><a href="#">Business Models</a></li>
+								<li><a href="#">Rules</a></li>
+								<li><a href="#">Help Center</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Programs</a></li>
+						<li><a href="#">Testimonials</a></li>
+						<li><a href="#">Who we are</a></li>
+						<li><a href="#">Get in touch</a></li>
+					</ul>
+					<ul id="affiliates--mob-menu" class="sub-menu flex flex--column sub-menu--mob">
+						<div href="#" id="" class="affiliate__pretitle pretitle--log-in pretitle--forget-pass parent-link--back">
+							<img src="img/arrow-left.svg" alt="arrow left">
+							<span>Go back</span>
+						</div>
+						<li><a href="#">Dashboard</a></li>
+						<li><a href="#">Tools</a></li>
+						<li><a href="#">Business Models</a></li>
+						<li><a href="#">Rules</a></li>
+						<li><a href="#">Help Center</a></li>
+					</ul>
+					<ul id="advertises--mob-menu" class="sub-menu flex flex--column sub-menu--mob">
+						<div href="#" id="" class="affiliate__pretitle pretitle--log-in pretitle--forget-pass parent-link--back">
+							<img src="img/arrow-left.svg" alt="arrow left">
+							<span>Go back</span>
+						</div>
+						<li><a href="#">Dashboard</a></li>
+						<li><a href="#">Tools</a></li>
+						<li><a href="#">Business Models</a></li>
+						<li><a href="#">Rules</a></li>
+						<li><a href="#">Help Center</a></li>
+					</ul>
+					<div id="mob-menu-contacts" class="btn affiliate-btn">Our Contacts</div>
+				</div>
+				<div class="open-menu__right flex flex--column">
+					<div href="#" id="mob-menu-contacts--back" class="affiliate__pretitle pretitle--log-in pretitle--forget-pass">
+						<img src="img/arrow-left.svg" alt="arrow left">
+						<span>Go back</span>
+					</div>
+					<div class="contac_us">Contact Us</div>
+					<div class="link-wrap flex flex--column">
+						<a class="link-content" href="tel:+18558946578">+1 855-894-6578</a>
+						<div class="link-title">Need a support? Give us a call!</div>
+					</div>
+					<div class="link-wrap flex flex--column link-wrap--mob">
+						<a class="link-content" href="mailto:info@armorica.network">info@armorica.network</a>
+						<div class="link-title">Feel free to send us a message</div>
+					</div>
+					<ul class="social-list flex flex--row">
+						<li><a href="#"><img src="img/LinkedIn.svg" alt="LinkedIn" class="img--response"></a></li>
+						<li><a href="#"><img src="img/Facebook.svg" alt="Facebook" class="img--response"></a></li>
+						<li><a href="#"><img src="img/Telegram.svg" alt="Telegram" class="img--response"></a></li>
+						<li><a href="#"><img src="img/Twitter.svg" alt="Twitter" class="img--response"></a></li>
+						<li><a href="#"><img src="img/Instagram.svg" alt="Instagram" class="img--response"></a></li>
+					</ul>
+					<div class="open-menu__btns-wrap flex flex--row">
+						<div class="btns-wrap flex flex--row">
+							<a href="#" id="affiliate-btn" class="btn affiliate-btn">JOIN AS affiliate</a>
+							<a href="#" class="btn advertiser-btn">AS advertiser</a>
+						</div>
+						<a href="#" class="signin-btn"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
+						<a href="#" class="signin-btn hidden"><img src="img/LogInBtnWhite.svg" alt="LogInBtn" class="img--response"></a>
+					</div>
+				</div>
 			</div>
-            <div id="affiliate-popup"class="open-menu-wrap">
-                <form class="affiliate-popup flex flex--column">
-                    <div class="line first"></div>
-                    <div class="line second"></div>
-                    <div class="line third"></div>
-                    <div class="line fourth"></div>
-                    <div class="affiliate__pretitle">Join as affiliate</div>
-                    <div class="affiliate__title">You have traffic, right? Join our afilliate<br>network and start making money of it.</div>
-                    <div class="affiliate__form flex flex--column">
-                        <div class="form__title">Fill the form below</div>
-                        <div class="form_inputs flex flex--row">
-                            <div class="inputs-column flex flex--column">
-                                <input type="text" class="input--text" placeholder="First name">
-                                <input type="text" class="input--text" placeholder="Last name">
-                                <input type="text" class="input--text" placeholder="E-mail">
-                                <input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
-                                <label for="form-password"></label>
-                            </div>
-                            <div class="inputs-column flex flex--column">
-                                <input type="text" class="input--text" placeholder="Login">
-                                <input type="text" class="input--text" placeholder="Link messenger">
-                            </div>
-                            <div class="inputs-column flex flex--column">
-    
-                                <input id="terms-input-aff" type="checkbox" class="input--checkbox" name="terms">
-                                <label for="terms-input-aff" class="input-label flex flex--row">
-                                    <span class="label__box"></span>
-                                    <span class="label__title">I agree with Terms for <a class="accent" href="#">Affiliates</a> and <a class="accent" href="#">Privacy Policy</a> in the ARMORICA network and consent to the processing of my personal data</span>
-                                </label>
-    
-                                <input id="notifications-input-aff" type="checkbox" class="input--checkbox" name="email-notifications">
-                                <label for="notifications-input-aff" class="input-label flex flex--row">
-                                    <span class="label__box"></span>
-                                    <span class="label__title">I agree to receive email notifications about affiliate programs, coupons and deals, finance updates and ARMORICA news</span>
-                                </label>
-                            </div>
+			<div class="line first"></div>
+			<div class="line second"></div>
+			<div class="line third"></div>
+			<div class="line fourth"></div>
+			<div class="line line--mob fifth"></div>
+		</div>
+		<div id="affiliate-popup" class="open-menu-wrap">
+			<form class="affiliate-popup flex flex--column">
+				<div class="line first"></div>
+				<div class="line second"></div>
+				<div class="line third"></div>
+				<div class="line fourth"></div>
+				<div class="line line--mob fifth"></div>
+				<div class="affiliate__pretitle">Join as affiliate</div>
+				<div class="affiliate__title">You have traffic, right? Join our afilliate<br>network and start making money of it.</div>
+				<div class="affiliate__form flex flex--column">
+					<div class="form__title">Fill the form below</div>
+					<div class="form_inputs flex flex--row">
+						<div class="inputs-column flex flex--column">
+							<input type="text" class="input--text" placeholder="First name">
+							<input type="text" class="input--text" placeholder="Last name">
+							<input type="text" class="input--text" placeholder="E-mail">
+							<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
+							<label for="form-password"></label>
+						</div>
+						<div class="inputs-column flex flex--column">
+							<input type="text" class="input--text" placeholder="Login">
+							<input type="text" class="input--text" placeholder="Link messenger">
+						</div>
+						<div class="inputs-column flex flex--column">
+
+							<input id="terms-input-aff--mob" type="checkbox" class="input--checkbox" name="terms">
+							<label for="terms-input-aff--mob" class="input-label flex flex--row">
+								<span class="label__box"></span>
+								<span class="label__title">I agree with Terms for <a class="accent" href="#">Affiliates</a> and <a class="accent" href="#">Privacy Policy</a> in the ARMORICA network and consent to the processing of my personal data</span>
+							</label>
+
+							<input id="notifications-input-aff--mob" type="checkbox" class="input--checkbox" name="email-notifications">
+							<label for="notifications-input-aff--mob" class="input-label flex flex--row">
+								<span class="label__box"></span>
+								<span class="label__title">I agree to receive email notifications about affiliate programs, coupons and deals, finance updates and ARMORICA news</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form__submit-wrap flex flex--row relative">
+					<div class="btns-wrap flex flex--row">
+						<a href="#" id="form-submit-aff" class="btn affiliate-btn opacity">JOIN AS affiliate</a>
+						<a href="#" class="btn advertiser-btn inverse hidden">AS advertiser</a>
+					</div>
+					<a href="#" class="signin-btn"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
+					<a href="#" class="signin-btn hidden"><img src="img/LogInBtnWhite.svg" alt="LogInBtn" class="img--response"></a>						
+				</div>
+				<div class="affiliate__form--mob">
+					
+					<div class="affiliate-form__slider">
+						
+						<div class="aff-slide--mob">
+							<div class="affiliate__title">You have traffic, right?<br>Join our afilliate network<br>and start making money of it.</div>
+							<div class="form__title">Fill the form below</div>
+							<div class="form_inputs flex flex--row">
+								<div class="inputs-column flex flex--column">
+									<input type="text" class="input--text" placeholder="First name">
+									<input type="text" class="input--text" placeholder="Last name">
+									<input type="text" class="input--text" placeholder="E-mail">
+									<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
+									<label for="form-password"></label>
+								</div>
+							</div>	
+						</div>
+						<div class="aff-slide--mob">
+							<div class="form_inputs flex flex--column">								
+								<div class="inputs-column flex flex--column" style="margin-bottom:9.66vw">
+									<input type="text" class="input--text" placeholder="Login">
+									<input type="text" class="input--text" placeholder="Link messenger">
+								</div>
+								<div class="inputs-column flex flex--column">
+		
+									<input id="terms-input-aff" type="checkbox" class="input--checkbox" name="terms">
+									<label for="terms-input-aff" class="input-label flex flex--row">
+										<span class="label__box"></span>
+										<span class="label__title">I agree with Terms for <a class="accent" href="#">Affiliates</a> and <a class="accent" href="#">Privacy Policy</a> in the ARMORICA network and consent to the processing of my personal data</span>
+									</label>
+		
+									<input id="notifications-input-aff" type="checkbox" class="input--checkbox" name="email-notifications">
+									<label for="notifications-input-aff" class="input-label flex flex--row">
+										<span class="label__box"></span>
+										<span class="label__title">I agree to receive email notifications about affiliate programs, coupons and deals, finance updates and ARMORICA news</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="aff-mob__nav relative flex flex--row">
+						<div class="aff-nav-wrap flex flex--row">
+							<div id="aff-mob-right" class="aff-mob__next-step btn aff-mob-right">Next Step</div>
+							<div id="aff-mob-left" class="aff-mob__next-step btn btn--img aff-mob-left hidden"><img src="img/arrow-white-left.svg" alt=""></div>
+							<a href="#" id="form-submit-aff" class="btn affiliate-btn opacity aff-mob-submit hidden">JOIN AS affiliate</a>
+						</div>
+						<div id="aff-mob-numbers" class="page-numbers flex flex--row page-numbers--brands">
+                            <div id="aff-mob-current" class="current-page">1</div>
+                            <div class="slash">/</div>
+                            <div id="aff-mob-amount" class="amount-pages">2</div>
                         </div>
-                    </div>
-                    <div class="form__submit-wrap flex flex--row">
-                        <div class="btns-wrap flex flex--row">
-                            <a href="#" id="form-submit-aff" class="btn affiliate-btn opacity">JOIN AS affiliate</a>
-                            <a href="#" class="btn advertiser-btn inverse hidden">AS advertiser</a>
+					</div>
+
+				</div>
+
+			</form>
+		</div>
+		<div id="advertiser-popup"class="open-menu-wrap">
+			<form class="affiliate-popup flex flex--column">
+				<div class="line first"></div>
+				<div class="line second"></div>
+				<div class="line third"></div>
+				<div class="line fourth"></div>
+				<div class="line line--mob fifth"></div>
+				<div class="affiliate__pretitle">Join as advertiser</div>
+				<div class="affiliate__title">You need traffic and are ready to pay for it?<br>Let’s discuss the cooperation conditions.</div>
+				<div class="affiliate__form flex flex--column">
+					<div class="form__title">Fill the form below</div>
+					<div class="form_inputs flex flex--row">
+						<div class="inputs-column flex flex--column">
+							<input type="text" class="input--text" placeholder="First name">
+							<input type="text" class="input--text" placeholder="Last name">
+							<input type="text" class="input--text" placeholder="E-mail">
+							<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
+							<label for="form-password"></label>
+						</div>
+						<div class="inputs-column flex flex--column">
+							<input type="text" class="input--text" placeholder="Website">
+							<input type="text" class="input--text" placeholder="Choose category">
+						</div>
+						<div class="inputs-column flex flex--column">
+
+							<input id="terms-input-adv" type="checkbox" class="input--checkbox" name="terms">
+							<label for="terms-input-adv" class="input-label flex flex--row">
+								<span class="label__box"></span>
+								<span class="label__title">I agree with Terms for <a class="accent" href="#">Affiliates</a> and <a class="accent" href="#">Privacy Policy</a> in the ARMORICA network and consent to the processing of my personal data</span>
+							</label>
+
+							<input id="notifications-input-adv" type="checkbox" class="input--checkbox" name="email-notifications">
+							<label for="notifications-input-adv" class="input-label flex flex--row">
+								<span class="label__box"></span>
+								<span class="label__title">I agree to receive email notifications about affiliate programs, coupons and deals, finance updates and ARMORICA news</span>
+							</label>
+
+							<input id="ownprogramm-adv" type="checkbox" class="input--checkbox" name="email-notifications">
+							<label for="ownprogramm-adv" class="input-label flex flex--row">
+								<span class="label__box"></span>
+								<span class="label__title">I have my own affiliate program</span>
+							</label>
+
+							<input id="cpa-adv" type="checkbox" class="input--checkbox" name="email-notifications">
+							<label for="cpa-adv" class="input-label flex flex--row">
+								<span class="label__box"></span>
+								<span class="label__title">I work with other CPA networks</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="form__submit-wrap flex flex--row relative">
+					<div class="btns-wrap flex flex--row">
+						<a href="#" id="form-submit-adv" class="btn affiliate-btn opacity">JOIN AS advertiser</a>
+						<a href="#" class="btn advertiser-btn inverse hidden">AS advertiser</a>
+					</div>
+					<a href="#" class="signin-btn"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
+					<a href="#" class="signin-btn hidden"><img src="img/LogInBtnWhite.svg" alt="LogInBtn" class="img--response"></a>						
+				</div>
+
+
+				<div class="affiliate__form--mob">
+					
+					<div class="advertise-form__slider">
+						
+						<div class="aff-slide--mob">
+							<div class="affiliate__title">You need traffic and are ready<br>to pay for it? Let’s discuss the<br>cooperation conditions.</div>
+							<div class="form__title">Fill the form below</div>
+							<div class="form_inputs flex flex--row">
+								<div class="inputs-column flex flex--column">
+									<input type="text" class="input--text" placeholder="First name">
+									<input type="text" class="input--text" placeholder="Last name">
+									<input type="text" class="input--text" placeholder="E-mail">
+									<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
+									<label for="form-password"></label>
+								</div>
+							</div>	
+						</div>
+						<div class="aff-slide--mob">
+							<div class="form_inputs flex flex--column">								
+								<div class="inputs-column flex flex--column" style="margin-bottom:9.66vw">
+									<input type="text" class="input--text" placeholder="Website">
+									<input type="text" class="input--text" placeholder="Choose category">
+								</div>
+								<div class="inputs-column flex flex--column">
+		
+									<input id="terms-input-adv--mob" type="checkbox" class="input--checkbox" name="terms">
+									<label for="terms-input-adv--mob" class="input-label flex flex--row">
+										<span class="label__box"></span>
+										<span class="label__title">I agree with Terms for <a class="accent" href="#">Affiliates</a> and <a class="accent" href="#">Privacy Policy</a> in the ARMORICA network and consent to the processing of my personal data</span>
+									</label>
+
+									<input id="notifications-input-adv--mob" type="checkbox" class="input--checkbox" name="email-notifications">
+									<label for="notifications-input-adv--mob" class="input-label flex flex--row">
+										<span class="label__box"></span>
+										<span class="label__title">I agree to receive email notifications about affiliate programs, coupons and deals, finance updates and ARMORICA news</span>
+									</label>
+
+									<input id="ownprogramm-adv--mob" type="checkbox" class="input--checkbox" name="email-notifications">
+									<label for="ownprogramm-adv--mob" class="input-label flex flex--row">
+										<span class="label__box"></span>
+										<span class="label__title">I have my own affiliate program</span>
+									</label>
+
+									<input id="cpa-adv--mob" type="checkbox" class="input--checkbox" name="email-notifications">
+									<label for="cpa-adv--mob" class="input-label flex flex--row">
+										<span class="label__box"></span>
+										<span class="label__title">I work with other CPA networks</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="aff-mob__nav relative flex flex--row">
+						<div class="aff-nav-wrap flex flex--row">
+							<div id="adv-mob-right" class="aff-mob__next-step btn aff-mob-right">Next Step</div>
+							<div id="adv-mob-left" class="aff-mob__next-step btn btn--img aff-mob-left hidden"><img src="img/arrow-white-left.svg" alt=""></div>
+							<a href="#" id="form-submit-aff" class="btn affiliate-btn opacity aff-mob-submit hidden">Join as advertiser</a>
+						</div>
+						<div id="adv-mob-numbers" class="page-numbers flex flex--row page-numbers--brands">
+                            <div id="adv-mob-current" class="current-page">1</div>
+                            <div class="slash">/</div>
+                            <div id="adv-mob-amount" class="amount-pages">2</div>
                         </div>
-                        <a href="#" class="signin-btn"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
-                        <a href="#" class="signin-btn hidden"><img src="img/LogInBtnWhite.svg" alt="LogInBtn" class="img--response"></a>						
-                    </div>
-                </form>
-            </div>
-            <div id="advertiser-popup"class="open-menu-wrap">
-                <form class="affiliate-popup flex flex--column">
-                    <div class="line first"></div>
-                    <div class="line second"></div>
-                    <div class="line third"></div>
-                    <div class="line fourth"></div>
-                    <div class="affiliate__pretitle">Join as advertiser</div>
-                    <div class="affiliate__title">You need traffic and are ready to pay for it?<br>Let’s discuss the cooperation conditions.</div>
-                    <div class="affiliate__form flex flex--column">
-                        <div class="form__title">Fill the form below</div>
-                        <div class="form_inputs flex flex--row">
-                            <div class="inputs-column flex flex--column">
-                                <input type="text" class="input--text" placeholder="First name">
-                                <input type="text" class="input--text" placeholder="Last name">
-                                <input type="text" class="input--text" placeholder="E-mail">
-                                <input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
-                                <label for="form-password"></label>
-                            </div>
-                            <div class="inputs-column flex flex--column">
-                                <input type="text" class="input--text" placeholder="Website">
-                                <input type="text" class="input--text" placeholder="Choose category">
-                            </div>
-                            <div class="inputs-column flex flex--column">
-    
-                                <input id="terms-input-adv" type="checkbox" class="input--checkbox" name="terms">
-                                <label for="terms-input-adv" class="input-label flex flex--row">
-                                    <span class="label__box"></span>
-                                    <span class="label__title">I agree with Terms for <a class="accent" href="#">Affiliates</a> and <a class="accent" href="#">Privacy Policy</a> in the ARMORICA network and consent to the processing of my personal data</span>
-                                </label>
-    
-                                <input id="notifications-input-adv" type="checkbox" class="input--checkbox" name="email-notifications">
-                                <label for="notifications-input-adv" class="input-label flex flex--row">
-                                    <span class="label__box"></span>
-                                    <span class="label__title">I agree to receive email notifications about affiliate programs, coupons and deals, finance updates and ARMORICA news</span>
-                                </label>
-    
-                                <input id="ownprogramm-adv" type="checkbox" class="input--checkbox" name="email-notifications">
-                                <label for="ownprogramm-adv" class="input-label flex flex--row">
-                                    <span class="label__box"></span>
-                                    <span class="label__title">I have my own affiliate program</span>
-                                </label>
-    
-                                <input id="cpa-adv" type="checkbox" class="input--checkbox" name="email-notifications">
-                                <label for="cpa-adv" class="input-label flex flex--row">
-                                    <span class="label__box"></span>
-                                    <span class="label__title">I work with other CPA networks</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form__submit-wrap flex flex--row">
-                        <div class="btns-wrap flex flex--row">
-                            <a href="#" id="form-submit-adv" class="btn affiliate-btn opacity">JOIN AS advertiser</a>
-                            <a href="#" class="btn advertiser-btn inverse hidden">AS advertiser</a>
-                        </div>
-                        <a href="#" class="signin-btn"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
-                        <a href="#" class="signin-btn hidden"><img src="img/LogInBtnWhite.svg" alt="LogInBtn" class="img--response"></a>						
-                    </div>
-                </form>
-            </div>
-            <div id="log-in-popup" class="log-in-wrap">
-                <div class="log-in-popup flex flex--row">
-                    <div class="log-in__left">
-                        <div class="grey-bg"></div>
-                    </div>
-                    <div class="log-in__right">
-                        <div class="log-in open">
-                            <div class="log-in__top flex flex--row">
-                                <div class="not-reg-wrap flex flex--row">
-                                    <a href="#" class="log-in-btn accent">Sign up</a>
-                                    <span class="not-reg">If you are not registered yet</span>
-                                </div>
-                                <div class="close--log-in">
-                                    <img src="img/menu-close.svg" alt="log in close" class="img--response">
-                                </div>
-                            </div>
-                            <div class="affiliate__pretitle pretitle--log-in">Log in</div>
-                            <div class="affiliate__title title--log-in">Welcome back!</div>
-                            <form class="flex flex--column">
-                                <div class="affiliate__form flex flex--column">
-                                    <div class="form__title">Log in with E-mail</div>
-                                    <div class="form_inputs flex flex--row">
-                                        <div class="inputs-column flex flex--column">
-                                            <input type="text" class="input--text" placeholder="E-mail">
-                                            <input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
-                                            <label for="form-password"></label>
-                                        </div>
-                                    </div>
-                                    <a href="#" id="forget-btn" class="forget-btn">Forgot Password or Username?</a>
-                                    <a href="#" id="log-in-form-btn" class="btn affiliate-btn log-in-form-btn">Log In</a>
-                                    <span class="submit-info">By loggin in, you agree with Terms for <a class="accent" href="#">Affiliates</a><br>and <a class="accent" href="#">Privacy Policy</a> in the ARMORICA network.</span>
-                                    <div class="log-in__social flex flex--column">
-                                        <div class="social__title">Or Log in with</div>	
-                                        <ul class="social-list flex flex--row">
-                                            <li><a href="#"><img src="img/LinkedIn.svg" alt="LinkedIn" class="img--response"></a></li>
-                                            <li><a href="#"><img src="img/Facebook.svg" alt="Facebook" class="img--response"></a></li>
-                                            <li><a href="#"><img src="img/Telegram.svg" alt="Telegram" class="img--response"></a></li>
-                                            <li><a href="#"><img src="img/Twitter.svg" alt="Twitter" class="img--response"></a></li>
-                                            <li><a href="#"><img src="img/Instagram.svg" alt="Instagram" class="img--response"></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="forget-pass">
-                            <div class="log-in__top flex flex--row">
-                                <div class="not-reg-wrap flex flex--row">
-                                    <a href="#" class="log-in-btn accent">Sign up</a>
-                                    <span class="not-reg">If you are not registered yet</span>
-                                </div>
-                                <div class="close--log-in">
-                                    <img src="img/menu-close.svg" alt="log in close" class="img--response">
-                                </div>
-                            </div>
-                            <a href="#" id="pretitle--forget-pass" class="affiliate__pretitle pretitle--log-in pretitle--forget-pass"><img src="img/arrow-left.svg" alt="arrow left"><span>Log in</span></a>
-                            <div class="affiliate__title title--log-in">Forgot password for username</div>
-                            <form class="flex flex--column">
-                                <div class="affiliate__form flex flex--column">
-                                    <div class="form__title">Enter your E-mail</div>
-                                    <div class="form_inputs flex flex--row">
-                                        <div class="inputs-column flex flex--column">
-                                            <input type="text" class="input--text" placeholder="Your email address">
-                                        </div>
-                                    </div>
-                                    <a href="#" id="log-in-form-btn" class="btn affiliate-btn log-in-form-btn">Send message</a>
-                                    <span class="submit-info">To make sure your account’s secure, we will send  you a message with your login and attach a link to update your current password.</span>								
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="menu-popup" class="open-menu-wrap">
-                <div class="open-menu flex flex--row">
-                    <div class="open-menu__left">
-                        <ul class="open-open__list flex flex--column">
-                            <li class="parent-link">
-                                <a href="#">Affiliates</a>
-                                <ul class="sub-menu flex flex--column">
-                                    <li><a href="#">Dashboard</a></li>
-                                    <li><a href="#">Tools</a></li>
-                                    <li><a href="#">Business Models</a></li>
-                                    <li><a href="#">Rules</a></li>
-                                    <li><a href="#">Help Center</a></li>
-                                </ul>
-                            </li>
-                            <li class="parent-link">
-                                <a href="#">Advertises</a>
-                                <ul class="sub-menu flex flex--column">
-                                    <li><a href="#">Dashboard</a></li>
-                                    <li><a href="#">Tools</a></li>
-                                    <li><a href="#">Business Models</a></li>
-                                    <li><a href="#">Rules</a></li>
-                                    <li><a href="#">Help Center</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Programs</a></li>
-                            <li><a href="#">Testimonials</a></li>
-                            <li><a href="#">Who we are</a></li>
-                            <li><a href="#">Get in touch</a></li>
-                        </ul>
-                    </div>
-                    <div class="open-menu__right flex flex--column">
-                        <div class="link-wrap flex flex--column">
-                            <a class="link-content" href="tel:+18558946578">+1 855-894-6578</a>
-                            <div class="link-title">Need a support? Give us a call!</div>
-                        </div>
-                        <div class="link-wrap flex flex--column">
-                            <a class="link-content" href="mailto:info@armorica.network">info@armorica.network</a>
-                            <div class="link-title">Feel free to send us a message</div>
-                        </div>
-                        <ul class="social-list flex flex--row">
-                            <li><a href="#"><img src="img/LinkedIn.svg" alt="LinkedIn" class="img--response"></a></li>
-                            <li><a href="#"><img src="img/Facebook.svg" alt="Facebook" class="img--response"></a></li>
-                            <li><a href="#"><img src="img/Telegram.svg" alt="Telegram" class="img--response"></a></li>
-                            <li><a href="#"><img src="img/Twitter.svg" alt="Twitter" class="img--response"></a></li>
-                            <li><a href="#"><img src="img/Instagram.svg" alt="Instagram" class="img--response"></a></li>
-                        </ul>
-                        <div class="open-menu__btns-wrap flex flex--row">
-                            <div class="btns-wrap flex flex--row">
-                                <a href="#" id="affiliate-btn" class="btn affiliate-btn">JOIN AS affiliate</a>
-                                <a href="#" class="btn advertiser-btn">AS advertiser</a>
-                            </div>
-                            <a href="#" class="signin-btn"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
-                            <a href="#" class="signin-btn hidden"><img src="img/LogInBtnWhite.svg" alt="LogInBtn" class="img--response"></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="line first"></div>
-                <div class="line second"></div>
-                <div class="line third"></div>
-                <div class="line fourth"></div>
-            </div>
-        </div>
+					</div>
+
+				</div>
+
+			</form>
+		</div>
+		<div id="log-in-popup" class="log-in-wrap relative">
+			<div class="line first"></div>
+			<div class="line second"></div>
+			<div class="line third"></div>
+			<div class="line fourth"></div>
+			<div class="line line--mob fifth"></div>
+			<div class="log-in-popup flex flex--row">
+				
+				<div class="log-in__left">
+					<div class="grey-bg"></div>
+				</div>
+				<div class="log-in__right">
+					<div class="head__left main-screen--left flex flex--row">
+						<a href="#" class="logo">
+							<img src="img/Logotype.svg" alt="Armorica" class="img--response logo--desc">
+							<img src="img/logo-m.svg" alt="Armorica" class="img--response logo--mob">
+						</a>
+						<div id="" class="close--log-in close--log-in--mob">
+							<div class="menu-close-wrap flex flex--row">
+								<span class="menu-close__text">Close</span>
+								<img class="menu-close__img" src="img/menu-close.svg" alt="menu-close">
+							</div>
+						</div>
+					</div>
+					<div class="log-in open">
+						
+						<div class="log-in__top flex flex--row">
+							<div class="not-reg-wrap flex flex--row">
+								<a href="#" class="log-in-btn accent">Sign up</a>
+								<span class="not-reg">If you are not registered yet</span>
+							</div>
+							<div class="close--log-in">
+								<img src="img/menu-close.svg" alt="log in close" class="img--response">
+							</div>
+						</div>
+						<div class="affiliate__pretitle pretitle--log-in">Log in</div>
+						<div class="affiliate__title title--log-in">Welcome back!</div>
+						<form class="flex flex--column">
+							<div class="affiliate__form flex flex--column">
+								<div class="form__title">Log in with E-mail</div>
+								<div class="form_inputs flex flex--row">
+									<div class="inputs-column flex flex--column">
+										<input type="text" class="input--text" placeholder="E-mail">
+										<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
+										<label for="form-password"></label>
+									</div>
+								</div>
+								<a href="#" id="forget-btn" class="forget-btn hidden--mob">Forgot Password or Username?</a>
+								<div class="flex flex--row">	
+									<a href="#" id="log-in-form-btn" class="btn affiliate-btn log-in-form-btn">Log In</a>
+									<a href="#" id="forget-btn--mob" class="btn log-in-form-btn forget-data--btn">Forgot Data</a>
+								</div>
+								<span class="submit-info">By loggin in, you agree with Terms for <a class="accent" href="#">Affiliates</a><br>and <a class="accent" href="#">Privacy Policy</a> in the ARMORICA network.</span>
+								<div class="log-in__social flex flex--column">
+									<div class="social__title">Or Log in with</div>	
+									<ul class="social-list flex flex--row">
+										<li><a href="#"><img src="img/LinkedIn.svg" alt="LinkedIn" class="img--response"></a></li>
+										<li><a href="#"><img src="img/Facebook.svg" alt="Facebook" class="img--response"></a></li>
+										<li><a href="#"><img src="img/Telegram.svg" alt="Telegram" class="img--response"></a></li>
+										<li><a href="#"><img src="img/Twitter.svg" alt="Twitter" class="img--response"></a></li>
+										<li><a href="#"><img src="img/Instagram.svg" alt="Instagram" class="img--response"></a></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="forget-pass">
+						<div class="log-in__top flex flex--row">
+							<div class="not-reg-wrap flex flex--row">
+								<a href="#" class="log-in-btn accent">Sign up</a>
+								<span class="not-reg">If you are not registered yet</span>
+							</div>
+							<div class="close--log-in">
+								<img src="img/menu-close.svg" alt="log in close" class="img--response">
+							</div>
+						</div>
+						<a href="#" id="pretitle--forget-pass" class="affiliate__pretitle pretitle--log-in pretitle--forget-pass"><img src="img/arrow-left.svg" alt="arrow left"><span>Log in</span></a>
+						<div class="affiliate__title title--log-in">Forgot password for username</div>
+						<form class="flex flex--column">
+							<div class="affiliate__form flex flex--column">
+								<div class="form__title">Enter your E-mail</div>
+								<div class="form_inputs flex flex--row">
+									<div class="inputs-column flex flex--column">
+										<input type="text" class="input--text" placeholder="Your email address">
+									</div>
+								</div>
+								<a href="#" id="log-in-form-btn" class="btn affiliate-btn log-in-form-btn">Send message</a>
+								<span class="submit-info">To make sure your account’s secure, we will send you a message with your login and attach a link to update your current password.</span>								
+							</div>
+						</form>						
+						<div class="not-reg-wrap flex flex--row">
+							<a href="#" class="log-in-btn accent">Sign up</a>
+							<span class="not-reg">If you are not registered yet</span>
+						</div>
+					</div>
+					<div class="change-pass">
+						<div class="log-in__top flex flex--row">
+							<div class="not-reg-wrap flex flex--row">
+								<a href="#" class="log-in-btn accent">Sign up</a>
+								<span class="not-reg">If you are not registered yet</span>
+							</div>
+							<div class="close--log-in">
+								<img src="img/menu-close.svg" alt="log in close" class="img--response">
+							</div>
+						</div>
+						<a href="#" id="pretitle--change-pass" class="affiliate__pretitle pretitle--log-in pretitle--forget-pass"><img src="img/arrow-left.svg" alt="arrow left"><span>Log in</span></a>
+						<div class="affiliate__title title--log-in">Reset password</div>
+						<form class="flex flex--column">
+							<div class="affiliate__form flex flex--column">
+								<div class="form__title">Create a new password</div>
+								<div class="form_inputs flex flex--row">
+									<div class="inputs-column flex flex--column">
+										<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
+									</div>
+								</div>
+								<a href="#" id="log-in-form-btn" class="btn affiliate-btn log-in-form-btn">Save Changes</a>
+								<span class="submit-info">It’s a good idea to use a strong password<br>that you’re not using elsewhere.</span>								
+							</div>
+						</form>
+					</div>
+					<div class="email-sent">
+						<div class="log-in__top flex flex--row">
+							<div class="not-reg-wrap flex flex--row">
+								<a href="#" class="log-in-btn accent">Sign up</a>
+								<span class="not-reg">If you are not registered yet</span>
+							</div>
+							<div class="close--log-in">
+								<img src="img/menu-close.svg" alt="log in close" class="img--response">
+							</div>
+						</div>
+						<div class="affiliate__pretitle pretitle--log-in">E-mail sent!</div>
+						<div class="affiliate__title title--log-in">Please,<br>check your e-mail.</div>
+						<form class="flex flex--column">
+							<div class="affiliate__form flex flex--row">
+								<a href="#" id="email-sent-ok-btn" class="btn affiliate-btn email-sent-ok-btn">Okay</a>
+								<a href="#" id="email-sent-btn" class="btn advertiser-btn email-sent-btn">Try to log in</a>
+							</div>
+						</form>					
+						<div class="not-reg-wrap flex flex--row">
+							<a href="#" class="log-in-btn accent">Sign up</a>
+							<span class="not-reg">If you are not registered yet</span>
+						</div>
+					</div>
+					<div class="pass-changed">
+						<div class="log-in__top flex flex--row">
+							<div class="not-reg-wrap flex flex--row">
+								<a href="#" class="log-in-btn accent">Sign up</a>
+								<span class="not-reg">If you are not registered yet</span>
+							</div>
+							<div class="close--log-in">
+								<img src="img/menu-close.svg" alt="log in close" class="img--response">
+							</div>
+						</div>
+						<div class="affiliate__pretitle pretitle--log-in">Password’ve been changed!</div>
+						<div class="affiliate__title title--log-in">Please, log in<br>with a new password.</div>
+						<form class="flex flex--column">
+							<div class="affiliate__form flex flex--row">
+								<a href="#" id="pass-changed-btn" class="btn affiliate-btn">Log in</a>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 	</header>
     <div class="landing">
         <div class="we-are-diffent--block">
@@ -312,6 +563,7 @@
 			<div class="line second"></div>
 			<div class="line third"></div>
 			<div class="line fourth"></div>
+			<div class="line line--mob fifth"></div>
             <div class="land__menu-wrap flex flex--row block relative">
                 <div class="land__pretitle">We are different</div>
                 <ul class="land__menu flex flex--row">
@@ -321,12 +573,121 @@
                     <li><a href="advertise-traffic.html" class="land-link">Traffic sources</a></li>
                     <li><a href="advertise-earning.html" class="land-link">Start earning</a></li>
                 </ul>
+                <div class="dropdown">
+                    <button class="dropbtn flex--row flex"><span>We offer</span><img src="img/arrow-bottom-green.svg" alt=""></button>
+                    <div class="dropdown-content">
+                        <a href="advertise-how-it-works.html" class="land-link">How it works</a>
+                        <a href="advertise-advertisers.html" class="land-link">Best advertisers</a>
+                        <a href="advertise-traffic.html" class="land-link">Traffic sources</a>
+                        <a href="advertise-earning.html" class="land-link">Start earning</a>
+                    </div>
+                </div>
             </div>
             <div class="land__title block relative">
                 Our best advertisers
             </div>
             <div class="brands-slider-wrap relative">
-                <div id="advertises-slider" class="brands-slider advertises-slider flex flex--row">
+                <div id="advertises-slider" class="brands-slider advertises-slider hidden--mob flex flex--row relative">
+                    <a href="#" class="advertises-slide-wrap">
+                        <div class="advertises-slide flex flex--row">
+                            <div class="advertises-slide__left">
+                                <img src="img/adv-slider-1.svg" alt="" class="img--response">
+                            </div>
+                            <div class="advertises-slide__right flex flex--column">
+                                <div class="advertises-slide__title flex flex--row">
+                                    <span>Airbnb</span>
+                                    <img src="img/linkto.svg" alt="">
+                                </div>
+                                <div class="advertises-slide__text">Advertising affordable housing for tourists</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="advertises-slide-wrap">
+                        <div class="advertises-slide flex flex--row">
+                            <div class="advertises-slide__left">
+                                <img src="img/adv-slider-2.svg" alt="" class="img--response">
+                            </div>
+                            <div class="advertises-slide__right flex flex--column">
+                                <div class="advertises-slide__title flex flex--row">
+                                    <span>Airbnb</span>
+                                    <img src="img/linkto.svg" alt="">
+                                </div>
+                                <div class="advertises-slide__text">Advertising affordable housing for tourists</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="advertises-slide-wrap">
+                        <div class="advertises-slide flex flex--row">
+                            <div class="advertises-slide__left">
+                                <img src="img/adv-slider-3.svg" alt="" class="img--response">
+                            </div>
+                            <div class="advertises-slide__right flex flex--column">
+                                <div class="advertises-slide__title flex flex--row">
+                                    <span>Airbnb</span>
+                                    <img src="img/linkto.svg" alt="">
+                                </div>
+                                <div class="advertises-slide__text">Advertising affordable housing for tourists</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="advertises-slide-wrap">
+                        <div class="advertises-slide flex flex--row">
+                            <div class="advertises-slide__left">
+                                <img src="img/adv-slider-4.svg" alt="" class="img--response">
+                            </div>
+                            <div class="advertises-slide__right flex flex--column">
+                                <div class="advertises-slide__title flex flex--row">
+                                    <span>Airbnb</span>
+                                    <img src="img/linkto.svg" alt="">
+                                </div>
+                                <div class="advertises-slide__text">Advertising affordable housing for tourists</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="advertises-slide-wrap">
+                        <div class="advertises-slide flex flex--row">
+                            <div class="advertises-slide__left">
+                                <img src="img/adv-slider-1.svg" alt="" class="img--response">
+                            </div>
+                            <div class="advertises-slide__right flex flex--column">
+                                <div class="advertises-slide__title flex flex--row">
+                                    <span>Airbnb</span>
+                                    <img src="img/linkto.svg" alt="">
+                                </div>
+                                <div class="advertises-slide__text">Advertising affordable housing for tourists</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="advertises-slide-wrap">
+                        <div class="advertises-slide flex flex--row">
+                            <div class="advertises-slide__left">
+                                <img src="img/adv-slider-2.svg" alt="" class="img--response">
+                            </div>
+                            <div class="advertises-slide__right flex flex--column">
+                                <div class="advertises-slide__title flex flex--row">
+                                    <span>Airbnb</span>
+                                    <img src="img/linkto.svg" alt="">
+                                </div>
+                                <div class="advertises-slide__text">Advertising affordable housing for tourists</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="advertises-slide-wrap">
+                        <div class="advertises-slide flex flex--row">
+                            <div class="advertises-slide__left">
+                                <img src="img/adv-slider-3.svg" alt="" class="img--response">
+                            </div>
+                            <div class="advertises-slide__right flex flex--column">
+                                <div class="advertises-slide__title flex flex--row">
+                                    <span>Airbnb</span>
+                                    <img src="img/linkto.svg" alt="">
+                                </div>
+                                <div class="advertises-slide__text">Advertising affordable housing for tourists</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div id="advertises-slider--mob" class="brands-slider advertises-slider flex flex--row relative">
                     <a href="#" class="advertises-slide-wrap">
                         <div class="advertises-slide flex flex--row">
                             <div class="advertises-slide__left">
@@ -428,7 +789,7 @@
                 </div>
             </div>
             
-            <div class="brands-nav-wrap flex flex--row block">
+            <div class="brands-nav-wrap flex flex--row block relative">
                 <div class="brands-nav-slider">
                     <a href="#" class="brands-nav-btn btn affiliate-btn">View all News</a>
                 </div>

@@ -225,9 +225,10 @@ header
 	padding: 2.78vw 6.59vw 2.78vw 8.33vw
 .main-screen--right
 	max-width: 41.66%
-	padding: 2.78vw 8.33vw 2.78vw 5.55vw
 	background-color: #019771
 	box-shadow: none
+.head__right
+	padding: 2.78vw 8.33vw 2.78vw 5.55vw
 //Header under menu Styles
 .content__left
 	position: relative
@@ -1316,9 +1317,56 @@ header
 	align-items: center
 .aff-nav-wrap
 	align-items: center
+/* Стиль Выпадающей Кнопки
+.dropbtn
+	font-family: "IbmplexsansSemiBold"
+	padding: 0
+	align-items: center
+	background-color: transparent
+	color: #019771
+	font-size: 3.86vw
+	border: none
+	cursor: pointer
+	span
+		margin-right: .96vw
+	img
+		width: 1.93vw
 
+/* контейнер <div> - необходим для размещения выпадающего содержимого
+
+.dropdown
+	position: relative
+	display: inline-block
+
+/* Выпадающей контент (по умолчанию скрыт)
+
+.dropdown-content
+	display: none
+	position: absolute
+	background-color: #f9f9f9
+	min-width: 160px
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2)
+	z-index: 1
+	top: 100%
+	a
+		color: black
+		padding: 12px 16px
+		text-decoration: none
+		display: block
+
+/* Ссылки внутри выпадающего списка
+
+/* Изменить цвет выпадающих ссылок при наведении
+
+/* Показать выпадающее меню при наведении
+
+.dropdown:hover
+  .dropdown-content
+    display: block
+
+/* Изменить цвет фона выпадающего кнопка при отображении выпадающего списка
 //Hidden for adaptive styles
-.logo--mob,.signin-btn--mob,.header-content--mob,.line--mob,.open-menu__right .affiliate__pretitle,#mob-menu-contacts,.sub-menu--mob,.contact_us-btn,.log-in__right .head__left,#forget-btn--mob,.features-slider
+.logo--mob,.signin-btn--mob,.header-content--mob,.line--mob,.open-menu__right .affiliate__pretitle,#mob-menu-contacts,.sub-menu--mob,.contact_us-btn,.log-in__right .head__left,#forget-btn--mob,.features-slider,.affiliate__form--mob,.land__menu--mob,.dropdown,.filter--mob,.features__nav,.partners__logos--mob,#advertises-slider--mob,footer .link-title,.log-in-wrap .line
 	display: none
 
 	

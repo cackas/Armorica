@@ -41,14 +41,19 @@
 		display: inherit !important
 	.hidden--mob
 		display: none
-	.logo--desc,.menu,.head__right,.content__left,.content__right,.open-menu__btns-wrap,.open-menu__right,.affiliate-popup>.affiliate__title,.affiliate-popup>.affiliate__form,.affiliate-popup>.form__submit-wrap,.log-in__left,.log-in__top
+	.logo--desc,.menu,.head__right,.content__left,.content__right,.open-menu__btns-wrap,.open-menu__right,.affiliate-popup>.affiliate__title,.affiliate-popup>.affiliate__form,.affiliate-popup>.form__submit-wrap,.log-in__left,.log-in__top,.land__menu,.filter__left
 		display: none
-	.logo--mob,.signin-btn--mob,.header-content--mob,.line--mob,.open-menu__right .affiliate__pretitle,#mob-menu-contacts,.contact_us-btn,#forget-btn--mob,.features-slider
+	.logo--mob,.signin-btn--mob,.header-content--mob,.line--mob,.open-menu__right .affiliate__pretitle,#mob-menu-contacts,.contact_us-btn,#forget-btn--mob,.features-slider,.land__menu--mob,.dropdown,.features__nav,#advertises-slider--mob,footer .link-title,.log-in-wrap .line
 		display: inherit
 	.log-in__right .head__left
 		display: flex
 		position: relative
 		background-color: #fff
+	.partners__logos--mob
+		display: flex
+	.affiliate__form--mob
+		display: flex
+		flex-direction: column
 	.line.first
 		left: 7.28vw
 	.line.second
@@ -310,8 +315,6 @@
 		font-size: 5.31vw
 		line-height: 7vw
 		margin-bottom: 14.49vw
-	.features-wrap
-		display: none
 	.feature
 		margin-bottom: 0
 		width: inherit
@@ -341,8 +344,8 @@
 		width: 100%
 	.brand-slide
 		margin-right: 0
-	.brand-slide
 		padding: 7.24vw
+		width: inherit
 	.brand__top
 		margin-bottom: 7.24vw
 	.brand__img
@@ -512,6 +515,279 @@
 	.rights
 		font-size: 3.38vw
 		line-height: 4.34vw
+	.features-wrap
+		flex-direction: column
+		padding: 0 10.38vw 0 7.28vw
+	.armo-presentation
+		width: inherit
+		margin-right: 0
+		margin-bottom: 14.49vw
+	.armo__logo
+		width: 72.4vw
+		margin-bottom: 9.66vw
+	.armo__text
+		font-size: 3.86vw
+		line-height: 6.28vw
+	.how-it-works-features .feature
+		background-image: url(../img/arrow-up-bg.svg)
+		background-size: 36.8vw auto
+		background-position: top right
+		margin-bottom: 14.49vw
+	.advertises-slide
+		flex-direction: column
+		padding: 7.24vw
+	.advertises-slide__left
+		width: inherit
+		margin-right: 0
+		margin-bottom: 4.83vw
+	.advertises-slide__title
+		margin-bottom: 3.86vw
+		font-size: 7.72vw
+		line-height: 10.1vw
+		span
+			margin-right: 2.89vw
+		img
+			width: 5.79vw
+	.advertises-slide__text
+		font-size: 3.86vw
+		line-height: 6.28vw
+	.earning-features .feature
+		padding-bottom: 19vw
+		margin-bottom: 7.24vw
+		background-position: bottom right
+		background-size: 28vw
+	.number__title
+		font-size: 7.72vw
+		line-height: 10.1vw
+		margin-bottom: 2.41vw
+	.number__text
+		font-size: 3.38vw
+		line-height: 4.34vw
+	.numbers-wrap
+		margin-bottom: 4.83vw
+		margin-right: 13vw
+	.traffic-features
+		width: inherit
+		margin-bottom: 22vw
+	.traffic--block
+		background-image: url(../img/world-mob.svg)
+		background-position-x: 7.28vw
+		background-position-y: bottom
+		background-size: 100% auto
+	.brand-item
+		flex-direction: column
+		margin-bottom: 9.66vw
+	.brand-item .brand-slide
+		border-bottom: none
+	.brand-item__right
+		border-top: none
+		border-left: 1px solid rgba(1,22,30,.1)
+		padding: 0 7.24vw 7.24vw
+	.brand-item__group
+		margin-bottom: 9.66vw
+	.brand-item__title
+		margin-bottom: 4.83vw
+		font-size: 3.38vw
+		line-height: 4.34vw
+	.brand-item__values
+		margin-bottom: 2.89vw
+		font-size: 3.86vw
+		line-height: 5vw
+	.show-btn
+		font-size: 3.86vw
+		line-height: 4.83vw
+	.filter__nav
+		flex-direction: column
+		align-items: flex-start
+	.filter-wrap
+		padding: 9.66vw 7.28vw 14.49vw
+	.filter__right
+		width: 100%
+		.filter__numbers
+			margin-right: 0
+			margin-bottom: 9.66vw
+		.current-page
+			margin-right: 0
+		.amount-pages
+			margin-right: 39vw
+	.filter-link
+		font-size: 3.38vw
+		line-height: 4.34vw
+		margin-right: 9.66vw
+		&.active
+			margin-right: 40.57vw
+	.filter__arrows
+		align-items: center
+	.filter--btn
+		background-color: #E5F4F0
+		padding: 3.38vw 9.66vw
+		color: #019771
+	.found-wrap
+		margin-right: 14.6vw
+	.found__value,.perpage__title,.found__title,.perpage__value
+		font-size: 3.86vw
+		line-height: 5vw
+	.found__value,.perpage__title
+		margin-right: 3.38vw
+	.filter-info
+		align-items: center
+		margin-bottom: 9.66vw
+	.filters-btns
+		margin-bottom: 7.24vw
+	.filter--text
+		font-size: 3.38vw
+		line-height: 4.34vw
+		margin-bottom: 3.38vw
+	.filter--mob
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		z-index: 1
+		background-color: #fff
+		padding: 9.66vw 0
+		min-height: 100vh
+	.filter--select
+		margin-bottom: 4.83vw
+	.filter--chekbox .label__title
+		font-size: 3.86vw
+		line-height: 5vw
+		margin-right: 3.38vw
+	.filter--chekbox
+		.label__amount
+			font-size: 3.38vw
+			line-height: 4.34vw
+			margin-right: 3.38vw
+		.label__img
+			width: 1.93vw
+	.subinputs-wrap
+		margin-bottom: 3.38vw
+	.filter-btns
+		.filter-add--btn
+			width: 100%
+	.filter-add--btn
+		background-color: #F1F9F7
+		margin-bottom: 2.41vw
+		color: inherit
+		&:last-child
+			margin-bottom: 0
+	.filter__inputs
+		margin-bottom: 9.66vw
+	.filter-btns
+		margin-bottom: 16.67vw
+	.filter-mob-results
+		align-items: center
+		padding: 9.66vw 7.28vw
+		&.green-bg
+			background-color: #F9FCFB
+		.btn,.found-wrap
+			margin-bottom: 0
+		.btn
+			margin-right: 7.5vw
+			color: #019771
+	#go-back-btn
+		padding: 0
+	.page-brand__left
+		width: inherit
+		margin-right: 0
+	.page-brand__content
+		flex-direction: column-reverse
+	.page-brand__content .brand-item__right
+		margin-bottom: 14.49vw
+	.page-brand__title
+		font-size: 5.79vw
+		line-height: 7.48vw
+		margin-bottom: 4.83vw
+	.page-brand__text
+		font-size: 3.38vw
+		line-height: 6.28vw
+		margin-bottom: 7.24vw
+	.page-brand__btn, .page-brand__img
+		margin-bottom: 14.49vw
+	.page-brand__lists
+		margin-bottom: 9.66vw
+		flex-wrap: wrap
+	.lists--left
+		margin-right: 0
+		margin-bottom: 7.24vw
+	.brand-page__list
+		margin-bottom: 7.24vw
+	.brand-page__list li.list__title
+		font-size: 5.31vw
+		line-height: 7vw
+		margin-bottom: 4.83vw
+	.brand-page__list li
+		font-size: 3.38vw
+		line-height: 6.28vw
+		margin-bottom: 2.89vw
+	.brand-page-btn
+		font-size: 3.38vw
+		line-height: 4.83vw
+	.support-wrap
+		flex-direction: column
+	.topics-wrap
+		margin-right: 0
+	.topics__content
+		flex-direction: column-reverse
+		margin-bottom: 14.49vw
+	.topics_slider-wrap
+		margin-bottom: 9.66vw
+	.topics__right
+		margin-bottom: 9.66vw
+	.faq-wrap
+		width: inherit
+	.faq-link
+		font-size: 4.34vw
+		line-height: 5.79vw
+		margin-bottom: 7.24vw
+	.support-page__menu-wrap
+		flex-direction: column
+		margin-bottom: 7.24vw
+	.support-search
+		margin-right: 0
+		margin-bottom: 7.24vw
+	.support-page__left
+		width: 100%
+		margin-right: 0
+	.support-page__text-wrap
+		padding: 0
+	.list__title
+		font-size: 5.31vw
+		line-height: 5vw
+		margin-bottom: 4.83vw
+	.example-text
+		font-size: 3.86vw
+		line-height: 6.76vw
+		margin-bottom: 3.38vw
+	.support__notice-wrap
+		padding: 7.24vw
+	.support-page__text-wrap
+		padding: 0 7.24vw
+	.code-text,.table
+		margin-bottom: 14.49vw
+	.code-text
+		font-size: 3.38vw
+		line-height: 5.79vw
+		padding: 7.24vw
+	.numeral__list
+		font-size: 3.38vw
+		line-height: 6.28vw
+		margin-bottom: 2.41vw
+	.list__pretitle
+		font-size: 4.34vw
+		line-height: 5.5vw
+		margin-bottom: 9.66vw
+	.table
+		overflow-x: scroll
+	.table__titles .cell
+		font-size: 3.38vw
+		line-height: 6.76vw
+		padding: 7.24vw 14.49vw 7.24vw 0
+	.cell
+		min-width: 42.75vw
+		width: 42.75vw
+		font-size: 3.38vw
+		line-height: 6.76vw
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
