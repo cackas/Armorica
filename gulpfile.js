@@ -38,10 +38,11 @@ gulp.task('styles', function () {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/modernizr/modernizr.js',
-		'app/libs/jquery/jquery-1.11.2.min.js',
+		'app/libs/jquery/jquery-3.4.1.min.js',
 		'app/libs/waypoints/waypoints.min.js',
 		'app/libs/animate/animate-css.js',
 		'app/libs/slick-carousel/slick/slick.min.js',
+		'app/libs/jquery.nicescroll.js'
 		])
 		.pipe(concat('libs.js'))
 		.pipe(uglify()) //Minify libs.js

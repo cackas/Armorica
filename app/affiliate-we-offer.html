@@ -156,7 +156,7 @@
 			<div class="line fourth"></div>
 			<div class="line line--mob fifth"></div>
 		</div>
-		<div id="affiliate-popup" class="open-menu-wrap">
+		<div id="affiliate-popup" class="open-menu-wrap affiliate-popup--screen">
 			<form class="affiliate-popup flex flex--column">
 				<div class="line first"></div>
 				<div class="line second"></div>
@@ -261,7 +261,7 @@
 
 			</form>
 		</div>
-		<div id="advertiser-popup"class="open-menu-wrap">
+		<div id="advertiser-popup"class="open-menu-wrap affiliate-popup--screen">
 			<form class="affiliate-popup flex flex--column">
 				<div class="line first"></div>
 				<div class="line second"></div>
@@ -1086,12 +1086,38 @@
                     <div class="affiliate__form flex flex--column">
                         <div class="form_inputs flex flex--row get-in-touch__inputs">
                             <div class="inputs-column flex flex--column">
-                                <textarea name="help" class="input--text" id="" cols="30" rows="8" placeholder="We’d like to help you with pleasure, just write to us a message..."></textarea>                                
+                                <div class="input-wrap relative">                                    
+                                    <textarea name="help" class="input--text" id="" cols="30" rows="8" placeholder="We’d like to help you with pleasure, just write to us a message..."></textarea>                                
+                                    <div class="input-texts">
+                                        <div class="input-text">message</div>
+                                        <div class="input-text input-text--error">INVALID message</div>
+                                    </div>
+                                </div>
+                                
                             </div>
                             <div class="inputs-column flex flex--column">
-                                <input type="text" class="input--text" placeholder="Type you name">
-                                <input type="text" class="input--text" placeholder="E-mail">
-                                <input type="text" class="input--text" placeholder="Phone number (optional)">
+                                <div class="input-wrap relative">                                    
+                                    <input type="text" class="input--text" placeholder="Type your name" required>
+                                    <div class="input-texts">
+                                        <div class="input-text">Name</div>
+                                        <div class="input-text input-text--error">INVALID Name</div>
+                                    </div>
+                                </div>
+                                <div class="input-wrap relative">                                    
+                                    <input type="text" class="input--text" placeholder="E-mail" required>
+                                    <div class="input-texts">
+                                        <div class="input-text">email</div>
+                                        <div class="input-text input-text--error">INVALID E-MAIL</div>
+                                    </div>
+                                </div>
+                                <div class="input-wrap relative">                                    
+                                    <input type="text" class="input--text" placeholder="Phone number (optional)" required>
+                                    <div class="input-texts">
+                                        <div class="input-text">Phone</div>
+                                        <div class="input-text input-text--error">INVALID Phone</div>
+                                    </div>
+                                </div>                                
+                                
                             </div>
                         </div>
                     </div>

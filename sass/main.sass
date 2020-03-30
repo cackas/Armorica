@@ -5,6 +5,7 @@
 @import "app/libs/animate/animate.sass"
 @import "../app/libs/slick-carousel/slick/slick.css"
 @import "../app/libs/slick-carousel/slick/slick-theme.css"
+
 *
 	outline: none
 *::-webkit-input-placeholder
@@ -27,6 +28,41 @@
 	color: #01161E
 	opacity: .6
 
+.input-text
+	font-size: .55vw
+	line-height: .69vw
+	position: absolute
+	top: .5vw
+	left: calc(2vw + 2px)
+	opacity: .6
+	transition: all .3s
+	opacity: 0
+	text-transform: uppercase
+input, textarea
+	position: relative
+	z-index: 1
+	&.touch
+		&:focus
+			&+.input-texts
+				.input-text
+					opacity: 1
+		&:invalid
+			border-left: 2px solid #F7567C
+			&+.input-texts
+				.input-text
+					opacity: 0
+					&.input-text--error
+						opacity: 1
+						color: #F7567C
+		&:valid
+			border-left: 2px solid #019771
+			&+.input-texts
+				.input-text
+					opacity: 1
+					color: #019771
+					&.input-text--error
+						opacity: 0
+
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
 	font-family: "IbmplexsansLight"
@@ -35,11 +71,22 @@ body input:required:valid,
 body textarea:required:valid
 	font-family: "IbmplexsansLight"
 	color: #01161E
-
+.nicescroll-rails-hr
+	display: none !important
+.nicescroll-rails,.nicescroll-cursors
+	width: .69vw !important
+	border: none !important
+	border-radius: 0 !important
+	
 //Custom Styles Here
+html
+	&.unscrolled
+		overflow: hidden
 body
 	color: #01161E
 	overflow-x: hidden
+	&.unscrolled
+		height: 100vh
 a,a:hover,a:active
 	color: #01161E
 	text-decoration: none
@@ -92,15 +139,22 @@ header
 	display: none
 	position: absolute
 	width: 100%
-	height: auto
+	min-height: calc(100vh - 100%)
 	top: 100%
 	z-index: 1
-.open-menu
 	background-color: #fff
 	background-image: url(../img/main-bg.svg)
 	background-repeat: no-repeat
 	background-size: 82.84vw 21.6vw
 	background-position: 8.37vw bottom
+	&.affiliate-popup--screen
+		background-image: url(../img/world.svg)
+		background-repeat: no-repeat
+		background-size: 59.72vw 41.67vw
+		background-position: 31.94vw 6.25vw
+		background-color: #fff
+
+.open-menu
 	position: relative
 	width: 100%
 	justify-content: space-between
@@ -137,9 +191,12 @@ header
 					border-right: 4px solid #019771
 		&:hover
 			.sub-menu
-				display: inherit
+				transform: rotate3d(0,0,0,90deg)
+
 .sub-menu
-	display: none
+	transition: all .3s
+	transform-origin: 5vw 0
+	transform: rotate3d(0,1,0,90deg)
 	position: absolute
 	width: max-content
 	padding-left: 10vw
@@ -340,14 +397,9 @@ header
 //Joim popups styles
 .affiliate-popup
 	position: relative
-	background-color: #fff
 	width: 100%
-	height: 100%
+	height: -webkit-fill-available
 	padding: 4.167vw 12.1vw 7.29vw 8.33vw
-	background-image: url(../img/world.svg)
-	background-repeat: no-repeat
-	background-size: 59.72vw 41.67vw
-	background-position: 31.94vw 6.25vw
 .affiliate__pretitle
 	position: relative
 	font-family: "IbmplexsansSemiBold"
@@ -386,6 +438,7 @@ header
 	line-height: 1.25vw
 	border: 1px solid rgba(1, 22, 30, 0.07)
 	margin-bottom: .69vw
+	background-color: transparent
 	&:last-child
 		margin-bottom: 0
 .form__submit-wrap
@@ -444,6 +497,8 @@ header
 	z-index: 1
 	&.open
 		display: inherit
+		.log-in__right
+			transform: translateX(0)
 .log-in
 	display: none
 	&.open
@@ -451,14 +506,14 @@ header
 .log-in-popup
 	width: 100%
 	height: 100%
+	background-color: rgba(#01161E,.6)
 .log-in__left
+	transition: all .3s
 	max-width: 58.33%
 	width: 100%
-.grey-bg
-	width: 100%
-	height: 100%
-	background-color: rgba(#01161E,.6)
+	min-height: 100vh
 .log-in__right
+	transition: all .3s
 	max-width: 41.66%
 	width: 100%
 	background-color: #fff
@@ -466,6 +521,10 @@ header
 	background-image: url(../img/log-in-bg.svg)
 	background-size: 100% 100%
 	background-repeat: no-repeat
+	transform: translateX(100%)
+	
+.forget-pass,.log-in,.change-pass,.email-sent,.pass-changed
+	animation: showFromRight .3s both
 .log-in__top
 	align-items: center
 	justify-content: space-between
@@ -607,6 +666,7 @@ header
 .brands-slider-wrap
 	padding: 0 0 0 8.33vw
 	margin-bottom: 6vw
+	overflow-x: hidden
 .brands-nav-slider
 	min-width: 51.39vw
 	margin-right: 3.3vw
@@ -895,6 +955,13 @@ header
 	width: 22.2vw
 	margin-right: 5vw
 	align-items: flex-start
+.how-it-works-features
+	.armo-presentation
+		animation: showFromRightWithOpacity .3s .2s both
+	.feature:nth-child(2)
+		animation: showFromRightWithOpacity .3s .3s both
+	.feature:nth-child(4)
+		animation: showFromRightWithOpacity .3s .4s both
 .armo__logo
 	width: 20.8vw
 	margin-bottom: 4.15vw
@@ -1366,10 +1433,34 @@ header
 
 /* Изменить цвет фона выпадающего кнопка при отображении выпадающего списка
 //Hidden for adaptive styles
-.logo--mob,.signin-btn--mob,.header-content--mob,.line--mob,.open-menu__right .affiliate__pretitle,#mob-menu-contacts,.sub-menu--mob,.contact_us-btn,.log-in__right .head__left,#forget-btn--mob,.features-slider,.affiliate__form--mob,.land__menu--mob,.dropdown,.filter--mob,.features__nav,.partners__logos--mob,#advertises-slider--mob,footer .link-title,.log-in-wrap .line
+.logo--mob,.signin-btn--mob,.header-content--mob,.line--mob,.open-menu__right .affiliate__pretitle,#mob-menu-contacts,.sub-menu--mob,.contact_us-btn,.log-in__right .head__left,#forget-btn--mob,.features-slider,.affiliate__form--mob,.land__menu--mob,.dropdown,.filter--mob,.features__nav,.partners__logos--mob,#advertises-slider--mob,footer .link-title,.log-in-wrap .line,.filter__nav--mob
 	display: none
 
-	
+//Animations
+@keyframes showFromRight
+	0%
+		transform: translateX(100%)
+	100%
+		transform: translateX(0)
+@keyframes showFromLeftRotate
+	0%
+		transform: rotate3d(0,1,0,90deg)
+	100%
+		transform: rotate3d(0,0,0,90deg)
+@keyframes hideFromRight
+	0%
+		transform: translateX(0)
+	100%
+		transform: translateX(100%)
+		
+@keyframes showFromRightWithOpacity
+	0%
+		transform: translateX(5vw)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
+
 //ALWAYS END
 
 @import "media"
