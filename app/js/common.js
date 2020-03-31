@@ -1,4 +1,6 @@
 $(function() {
+	//Header Bg
+	$('.header__content').addClass('bgshow');
 
 	//SVG Fallback
 	if(!Modernizr.svg) {
@@ -394,11 +396,25 @@ $(function() {
 	}
 //Ends mob-menu-contacts
 
+//Is Mobile?
+	function isMobile(){
+		let width = window.screen.width;
+
+		if(width<769){
+			return true
+		} else {
+			return false
+		}
+	}
+
 //Adaptive parent link menu
+
 	function parentLink(){
 		$('#affiliates--mob').click(function(e){
-			$('.open-open__list').hide();
-			$('#affiliates--mob-menu').show();
+			if(isMobile()){
+				$('.open-open__list').hide();
+				$('#affiliates--mob-menu').show();
+			}
 		})
 		$('.sub-menu--mob .affiliate__pretitle').click(function(e){
 			$('.open-open__list').show();
@@ -406,8 +422,10 @@ $(function() {
 		})
 
 		$('#advertises--mob').click(function(e){
-			$('.open-open__list').hide();
-			$('#advertises--mob-menu').show();
+			if(isMobile()){
+				$('.open-open__list').hide();
+				$('#advertises--mob-menu').show();
+			}
 		})
 		$('.sub-menu--mob .affiliate__pretitle').click(function(e){
 			$('.open-open__list').show();
@@ -505,4 +523,104 @@ $(function() {
 	$('input, textarea').focus(function(e){
 		$(this).addClass('touch');
 	})
+//Counter
+	$(".9973777").counter({
+		autoStart: true, // true/false, default: true
+		duration: 2000, // milliseconds, default: 1500
+		countFrom: 0,// start counting at this number, default: 0
+		countTo: 9973777,// count to this number, default: 0
+		runOnce: true,// only run the counter once, default: false
+		placeholder: "0",
+		easing: "easeOutCubic",
+		onComplete:function() {
+			setInterval(function(){
+				let number = $(".9973777").text();
+				number = Number.parseInt(number);
+				number++;
+				$(".9973777").text(number);
+			},1000)
+		},
+		numberFormatter: // function used to format the displayed numbers.
+		function(number) {
+		  return number.toFixed();
+		}
+	});
+	$(".31954").counter({
+		autoStart: true, // true/false, default: true
+		duration: 2000, // milliseconds, default: 1500
+		countFrom: 0,// start counting at this number, default: 0
+		countTo: 31954,// count to this number, default: 0
+		runOnce: true,// only run the counter once, default: false
+		placeholder: "0",
+		easing: "easeOutCubic",
+		numberFormatter: // function used to format the displayed numbers.
+		function(number) {
+		  return "+" + number.toFixed();
+		}
+	});
+	$(".1600").counter({
+		autoStart: true, // true/false, default: true
+		duration: 2000, // milliseconds, default: 1500
+		countFrom: 0,// start counting at this number, default: 0
+		countTo: 1600,// count to this number, default: 0
+		runOnce: true,// only run the counter once, default: false
+		placeholder: "0",
+		easing: "easeOutCubic",
+		numberFormatter: // function used to format the displayed numbers.
+		function(number) {
+		  return "+" + number.toFixed();
+		}
+	});
+	$(".101").counter({
+		autoStart: true, // true/false, default: true
+		duration: 2000, // milliseconds, default: 1500
+		countFrom: 0,// start counting at this number, default: 0
+		countTo: 101,// count to this number, default: 0
+		runOnce: true,// only run the counter once, default: false
+		placeholder: "0",
+		easing: "easeOutCubic",
+		numberFormatter: // function used to format the displayed numbers.
+		function(number) {
+		  return "+" + number.toFixed();
+		}
+	});
+	$(".4-5").counter({
+		autoStart: true, // true/false, default: true
+		duration: 2000, // milliseconds, default: 1500
+		countFrom: 0,// start counting at this number, default: 0
+		countTo: 4.5,// count to this number, default: 0
+		runOnce: true,// only run the counter once, default: false
+		placeholder: "0",
+		easing: "easeOutCubic",
+		numberFormatter: // function used to format the displayed numbers.
+		function(number) {
+		  return "$" + number.toFixed(1);
+		}
+	});
+	$(".34").counter({
+		autoStart: true, // true/false, default: true
+		duration: 2000, // milliseconds, default: 1500
+		countFrom: 0,// start counting at this number, default: 0
+		countTo: 34,// count to this number, default: 0
+		runOnce: true,// only run the counter once, default: false
+		placeholder: "0",
+		easing: "easeOutCubic",
+		numberFormatter: // function used to format the displayed numbers.
+		function(number) {
+		  return "+" + number.toFixed();
+		}
+	});
+	$(".56").counter({
+		autoStart: true, // true/false, default: true
+		duration: 1, // milliseconds, default: 1500
+		countFrom: 0,// start counting at this number, default: 0
+		countTo: 56,// count to this number, default: 0
+		runOnce: true,// only run the counter once, default: false
+		placeholder: "0",
+		easing: "easeOutCubic",
+		numberFormatter: // function used to format the displayed numbers.
+		function(number) {
+		  return "+" + number.toFixed();
+		}
+	});
 });

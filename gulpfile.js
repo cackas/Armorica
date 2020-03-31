@@ -42,7 +42,9 @@ gulp.task('scripts', function() {
 		'app/libs/waypoints/waypoints.min.js',
 		'app/libs/animate/animate-css.js',
 		'app/libs/slick-carousel/slick/slick.min.js',
-		'app/libs/jquery.nicescroll.js'
+		'app/libs/jquery.nicescroll.js',
+		'app/libs/counter.min.js',
+		'app/libs/jquery.easing.js'
 		])
 		.pipe(concat('libs.js'))
 		.pipe(uglify()) //Minify libs.js

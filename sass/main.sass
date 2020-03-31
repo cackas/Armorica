@@ -140,6 +140,8 @@ header
 	position: absolute
 	width: 100%
 	min-height: calc(100vh - 100%)
+	max-height: calc(100vh - 100%)
+	height: calc(100vh - 100%)
 	top: 100%
 	z-index: 1
 	background-color: #fff
@@ -224,13 +226,100 @@ header
 .menu
 	margin-right: 5.76vw
 	li
-		margin-right: 3.75vw
-		&:last-child
-			margin-right: 0
+		width: 7vw
 	.link
+		display: inline-block
 		color: #01161E
 		font-size: 1.11vw
 		line-height: 1.45vw
+		position: relative
+		transition: all .3s
+		&:after
+			content: ''
+			transition: all .3s
+			position: absolute
+			top: 100%
+			left: 0
+			width: 4px
+			height: 4px
+			background-color: #019771
+			opacity: 0
+		&:before
+			content: ''
+			transition: all .3s
+			position: absolute
+			top: 100%
+			left: 8px
+			width: 0
+			height: 2px
+			transform: translateY(1px)
+			background-color: #019771
+		&:hover,&:active
+			color: #019771
+			font-family: "IbmplexsansBold"
+			&:after
+				content: ''
+				transition: all .3s
+				position: absolute
+				top: 100%
+				left: 0
+				width: 4px
+				height: 4px
+				background-color: #019771
+				opacity: 1
+			&:before
+				content: ''
+				transition: all .3s
+				position: absolute
+				top: 100%
+				left: 8px
+				width: calc(100% - 8px)
+				height: 2px
+				transform: translateY(1px)
+				background-color: #019771
+		&.active
+			font-family: "IbmplexsansBold"
+			&:after
+				content: ''
+				transition: all .3s
+				position: absolute
+				top: 100%
+				left: 0
+				width: 4px
+				height: 4px
+				background-color: #019771
+				opacity: 1
+			&:before
+				content: ''
+				transition: all .3s
+				position: absolute
+				top: 100%
+				left: 8px
+				width: calc(60% - 8px)
+				height: 2px
+				transform: translateY(1px)
+				background-color: #019771
+			&:hover,&:active
+				&:after
+					content: ''
+					transition: all .3s
+					position: absolute
+					top: 100%
+					left: 0
+					width: 4px
+					height: 4px
+					background-color: #019771
+				&:before
+					content: ''
+					transition: all .3s
+					position: absolute
+					top: 100%
+					left: 8px
+					width: calc(100% - 8px)
+					height: 2px
+					transform: translateY(1px)
+					background-color: #019771
+			
 .menu-btn
 	width: 1.67vw
 .menu-close
@@ -262,20 +351,40 @@ header
 	&.inverse
 		background-color: #fff
 		color: #019771
+	&:hover,&:active
+		color: #01161E
+		background-color: #F4FFFC
 .affiliate-btn
 	background-color: #019771
 	color: #fff
 .affiliate-btn.inverse
 	background-color: #fff
 	color: #019771
+	&:hover,&:active
+		color: #01161E
+		background-color: #F4FFFC
 .advertiser-btn
 	color: #019771
 	background-color: transparent
+	&:hover,&:active
+		color: #46B397
+		background-color: rgba(1, 151, 113, 0.05)
 .advertiser-btn.inverse
 	color: #fff
 	background-color: #019771
+	&:hover,&:active
+		color: #FEFEFE
+		background-color: rgba(254, 254, 254, 0.15)
 .signin-btn
-	width: 1.8vw
+	padding: .833vw
+	img
+		width: 1.7vw
+	&:hover
+		background-color: rgba(1, 151, 113, 0.05)
+.main-screen--right	
+	.signin-btn
+		&:hover
+			background-color: rgba(254, 254, 254, 0.15)
 //Header main Screen
 .main-screen--left
 	max-width: 58.33%
@@ -295,14 +404,21 @@ header
 	margin-bottom: 2.833vw
 	flex-wrap: wrap
 .stat-wrap
-	margin-right: 4.86vw
 	margin-bottom: 3vw
+	width: 13.7vw
+	animation: showFromLeftWithOpacity .3s .2s both
 .stat__number
 	font-family: "IbmplexsansBold"
 	font-size: 2.5vw
 	line-height: 3.26vw
-	margin-right: .694vw
 	margin-bottom: .694vw
+	width: 100%	
+	cursor: pointer
+	&:hover
+		color: #019771
+	span
+		display: inline-block
+		width: 39%
 .stat__title
 	font-family: "IbmplexsansLight"
 	font-size: 1.11vw
@@ -310,6 +426,10 @@ header
 	margin-right: .694vw
 .stat--main
 	margin-bottom: 4.16vw
+	width: 40vw
+	span
+		width: 70%
+		text-align: end
 	.stat__number
 		font-size: 6.67vw
 		line-height: 8vw
@@ -343,11 +463,14 @@ header
 	line-height: 2.22vw
 	color: #FEFEFE
 .header__content
-	background-image: url(../img/main-bg.svg)
+	transition: all .5s
+	background-image: url(../img/main-bg.png)
 	background-repeat: no-repeat
-	background-size: 82.84vw 21.6vw
-	background-position: 8.37vw bottom
+	background-position: 8.37vw 100%
 	position: relative
+	background-size: 82.84vw 0
+	&.bgshow
+		background-size: 82.84vw 21.6vw
 .line
 	position: absolute
 	height: 100%
@@ -398,7 +521,7 @@ header
 .affiliate-popup
 	position: relative
 	width: 100%
-	height: -webkit-fill-available
+	height: 100%
 	padding: 4.167vw 12.1vw 7.29vw 8.33vw
 .affiliate__pretitle
 	position: relative
@@ -522,7 +645,7 @@ header
 	background-size: 100% 100%
 	background-repeat: no-repeat
 	transform: translateX(100%)
-	
+	min-height: 100%	
 .forget-pass,.log-in,.change-pass,.email-sent,.pass-changed
 	animation: showFromRight .3s both
 .log-in__top
@@ -686,8 +809,9 @@ header
 	margin-right: 4.167vw
 	&:last-child
 		margin-right: 0
-	&:hover,&:active,&:link
+	&:hover,&:active,&:visited
 		color: #01161E
+		border: 1px solid #019771
 .brand__top
 	align-items: center
 	margin-bottom: 2vw
@@ -775,6 +899,9 @@ header
 .partner
 	display: block
 	margin-right: 2vw
+	opacity: .6
+	&:hover,&:active
+		opacity: 1
 
 //Ournews styles
 .ournews--block
@@ -910,7 +1037,7 @@ header
 	&:last-child
 		margin-bottom: 0
 	&:hover,&:active
-		color: #01161E
+		color: #019771
 .footer-col
 	margin-right: 5.7vw
 .footer__contacts
@@ -1460,7 +1587,20 @@ header
 	100%
 		transform: translateX(0)
 		opacity: 1
+		
+@keyframes showFromLeftWithOpacity
+	0%
+		transform: translateX(-5vw)
+		opacity: 0
+	100%
+		transform: translateX(0)
+		opacity: 1
 
+@keyframes hoverWidth
+	0%
+		width: 0
+	100%
+		width: 90%
 //ALWAYS END
 
 @import "media"
