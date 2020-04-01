@@ -243,6 +243,9 @@ $(function() {
 			$('.log-in-wrap').fadeOut(200);
 			$('.log-in-wrap').removeClass('open');
 			$('footer').removeClass('hidden');
+			$('#affiliate-popup').removeClass('open');
+			$('#advertiser-popup').removeClass('open');			
+			$('.header__top').removeClass('open');
 		})
 		
 	}
@@ -623,4 +626,13 @@ $(function() {
 		  return "+" + number.toFixed();
 		}
 	});
+//Logo hover effect
+	$('#logo-svg').mouseenter(function(e){
+		$(this).find('.black-el').attr('fill', '#019771');
+		$(this).find('.green-el').attr('fill', '#01161E');
+	})
+	$('#logo-svg').mouseleave(function(e){
+		$(this).find('.black-el').attr('fill', '#01161E');
+		$(this).find('.green-el').attr('fill', '#019771');
+	})
 });
