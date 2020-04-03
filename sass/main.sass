@@ -256,7 +256,7 @@ header
 			background-color: #019771
 		&:hover,&:active
 			color: #019771
-			font-family: "IbmplexsansBold"
+			font-weight: bolder
 			&:after
 				content: ''
 				transition: all .3s
@@ -812,6 +812,10 @@ header
 	&:hover,&:active,&:visited
 		color: #01161E
 		border: 1px solid #019771
+.advertises-slide
+	&:hover,&:active,&:visited
+		color: #01161E
+		border: 1px solid #019771
 .brand__top
 	align-items: center
 	margin-bottom: 2vw
@@ -979,7 +983,10 @@ header
 	flex-wrap: wrap
 	.stat-wrap
 		width: 13.8vw
-		margin-right: 0
+		margin-right: 0	
+		.stat__number
+			&:hover
+				color: #fff
 	.stat-wrap--big
 		width: 27.78vw
 		margin-bottom: 5.55vw
@@ -1190,9 +1197,20 @@ header
 	font-family: "IbmplexsansBold"
 	font-size: 1.38vw
 	line-height: 1.8vw
-	margin-bottom: 2.78vw
+	margin-bottom: 0
+	cursor: pointer
+	& + .filter__inputs
+		display: none
 	img
 		width: .833vw
+		transition: all .3s
+		transform: rotate(180deg)
+	&.active
+		margin-bottom: 2.78vw
+		img
+			transform: rotate(0deg)
+		& + .filter__inputs
+			display: flex
 .filter-group
 	margin-bottom: 4.16vw
 	&:last-child
@@ -1560,7 +1578,7 @@ header
 
 /* Изменить цвет фона выпадающего кнопка при отображении выпадающего списка
 //Hidden for adaptive styles
-.logo--mob,.signin-btn--mob,.header-content--mob,.line--mob,.open-menu__right .affiliate__pretitle,#mob-menu-contacts,.sub-menu--mob,.contact_us-btn,.log-in__right .head__left,#forget-btn--mob,.features-slider,.affiliate__form--mob,.land__menu--mob,.dropdown,.filter--mob,.features__nav,.partners__logos--mob,#advertises-slider--mob,footer .link-title,.log-in-wrap .line,.filter__nav--mob
+.logo--mob,.signin-btn--mob,.header-content--mob,.line--mob,.open-menu__right .affiliate__pretitle,#mob-menu-contacts,.contact_us-btn,.log-in__right .head__left,#forget-btn--mob,.features-slider,.affiliate__form--mob,.land__menu--mob,.dropdown,.features__nav,.partners__logos--mob,#advertises-slider--mob,footer .link-title,.log-in-wrap .line,.filter__nav--mob
 	display: none
 
 //Animations

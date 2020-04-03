@@ -16,25 +16,25 @@
 @media only screen and (max-width : 768px)
 	
 	/*Disable Animation on Mobile Devices*/
-	*
-		/*CSS transitions*/
+	
+		/*CSS transitions
 		-o-transition-property: none !important
 		-moz-transition-property: none !important
 		-ms-transition-property: none !important
 		-webkit-transition-property: none !important
 		transition-property: none !important
-		/*CSS transforms*/
+		/*CSS transforms
 		-o-transform: none !important
 		-moz-transform: none !important
 		-ms-transform: none !important
 		-webkit-transform: none !important
 		transform: none !important
-		/*CSS animations*/
+		/*CSS animations
 		-webkit-animation: none !important
 		-moz-animation: none !important
 		-o-animation: none !important
 		-ms-animation: none !important
-		animation: none !important
+		animation: none !important*/
 
 	//Custom styles
 	.visible--mob
@@ -77,6 +77,9 @@
 	.signin-btn--mob
 		width: 6.28vw
 		margin-left: 20vw
+		padding: 0
+		img
+			width: 100%
 	.menu-btn
 		width: 5.79vw
 	.header-content--mob
@@ -165,7 +168,8 @@
 		left: inherit
 		padding: 0
 		margin: 0
-		margin-bottom: 30.91vw		
+		margin-bottom: 30.91vw
+		transform: none
 		&>li
 			margin-bottom: 9.67vw
 			&:last-child
@@ -251,6 +255,7 @@
 		margin-bottom: 2.41vw
 		padding: 3.62vw 7.24vw
 		width: 79.3vw
+		z-index: 0
 	.input--password+label:after
 		width: 3.86vw
 		height: 3.14vw
@@ -656,6 +661,7 @@
 		background-color: #fff
 		padding: 9.66vw 0
 		min-height: 100vh
+		z-index: 2
 	.filter--select
 		margin-bottom: 4.83vw
 	.filter--chekbox .label__title
@@ -797,6 +803,16 @@
 		width: 42.75vw
 		font-size: 3.38vw
 		line-height: 6.76vw
+	.input-texts
+		display: none
+	.brand-item
+		&:hover
+			.brand-item__right
+				border: 1px solid #019771
+				border-top: none
+			.brand-slide
+				border: 1px solid #019771
+				border-bottom: none
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
