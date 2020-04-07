@@ -40,8 +40,25 @@
 		<div class="header__top flex flex--row">
 			<div class="head__left main-screen--left flex flex--row">
 				<a href="#" class="logo">
-					<img src="img/Logotype.svg" alt="Armorica" class="img--response logo--desc">
 					<img src="img/logo-m.svg" alt="Armorica" class="img--response logo--mob">
+					<svg alt="Armorica" class="img--response logo--desc" id="logo-svg" width="101" height="48" viewBox="0 0 101 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0)">
+						<path class="black-el" fill-rule="evenodd" clip-rule="evenodd" d="M0 0V21.8182H4.40002V13.0909H17.6001V21.8182H22.0001V0H0ZM17.6001 4.36364H4.40002V8.72727H17.6001V4.36364Z" fill="#01161E"/>
+						<path class="black-el" fill-rule="evenodd" clip-rule="evenodd" d="M26.4001 0V21.8182H30.8001V13.0909H37.4001L46.2002 21.8182H48.4002V17.4545L41.8002 10.9091L48.4002 4.36364V0H26.4001ZM41.8002 4.36364H30.8001V8.72727H37.4001L41.8002 4.36364Z" fill="#01161E"/>
+						<path class="black-el" fill-rule="evenodd" clip-rule="evenodd" d="M0 26.1818V48H4.40002V39.2727H11L19.8001 48H22.0001V43.6364L15.4001 37.0909L22.0001 30.5455V26.1818H0ZM15.4001 30.5455L11 34.9091H4.40002V30.5455H15.4001Z" fill="#01161E"/>
+						<path class="black-el" d="M57.2002 0L63.8003 6.54545L70.4003 0H74.8003V21.8182H70.4003V6.54545L63.8003 13.0909L57.2002 6.54545V21.8182H52.8002V0H57.2002Z" fill="#01161E"/>
+						<path class="black-el" fill-rule="evenodd" clip-rule="evenodd" d="M83.6003 48H79.2003V26.1818H101.2V48H96.8004V39.2727H83.6003V48ZM96.8004 34.9091H83.6003V30.5455H96.8004V34.9091Z" fill="#01161E"/>
+						<path class="black-el" d="M26.4001 26.1818V30.5455H35.2001V43.6364H26.4001V48H48.4002V43.6364H39.6002V30.5455H48.4002V26.1818H26.4001Z" fill="#01161E"/>
+						<path class="black-el" d="M70.4003 34.9091H74.8003V26.1818H52.8002V48H74.8003V39.2727H70.4003V43.6364H57.2002V30.5455H70.4003V34.9091Z" fill="#01161E"/>
+						<path class="green-el" fill-rule="evenodd" clip-rule="evenodd" d="M79.0435 0V21.8182H101V0H79.0435ZM96.6087 17.4545H83.4348V4.36364H96.6087V17.4545Z" fill="#019771"/>
+						<path class="green-el" d="M87.8262 8.72729H92.2175V13.0909H87.8262V8.72729Z" fill="#019771"/>
+						</g>
+						<defs>
+						<clipPath id="clip0">
+						<rect width="101" height="48" fill="white"/>
+						</clipPath>
+						</defs>
+					</svg>						
 				</a>
 				<ul class="menu flex flex--row">
 					<li><a href="affiliate-we-offer.html" class="link">Affiliates</a></li>
@@ -57,13 +74,13 @@
 					</div>
 				</a>
 			</div>
-			<div class="head__right flex flex--row">
+			<div class="head__right main-screen--right flex flex--row">
 				<div class="btns-wrap flex flex--row">
-					<a href="#" id="affiliate-btn" class="btn affiliate-btn">JOIN AS affiliate</a>
-					<a href="#" id="advertiser-btn" class="btn advertiser-btn">AS advertiser</a>
+					<a href="#" id="affiliate-btn" class="btn affiliate-btn inverse">JOIN AS affiliate</a>
+					<a href="#" id="advertiser-btn" class="btn advertiser-btn inverse">AS advertiser</a>
 				</div>
-				<a href="#" class="signin-btn"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
-				<a href="#" class="signin-btn hidden"><img src="img/LogInBtnWhite.svg" alt="LogInBtn" class="img--response"></a>
+				<a href="#" class="signin-btn hidden"><img src="img/LogInBtn.svg" alt="LogInBtn" class="img--response"></a>
+				<a href="#" class="signin-btn"><img src="img/LogInBtnWhite.svg" alt="LogInBtn" class="img--response"></a>
 			</div>			
 		</div>
 		<div id="menu-popup" class="open-menu-wrap">
@@ -72,7 +89,7 @@
 					<ul class="open-open__list flex flex--column">
 						<li class="parent-link">
 							<a id="affiliates--mob" href="#">Affiliates</a>
-							<ul class="sub-menu flex flex--column">								
+							<ul class="sub-menu flex flex--column hidden--mob">								
 								<li><a href="#">Dashboard</a></li>
 								<li><a href="#">Tools</a></li>
 								<li><a href="#">Business Models</a></li>
@@ -82,7 +99,7 @@
 						</li>
 						<li class="parent-link">
 							<a id="advertises--mob" href="#">Advertises</a>
-							<ul class="sub-menu flex flex--column">
+							<ul class="sub-menu flex flex--column hidden--mob">
 								<li><a href="#">Dashboard</a></li>
 								<li><a href="#">Tools</a></li>
 								<li><a href="#">Business Models</a></li>
@@ -95,7 +112,7 @@
 						<li><a href="#">Who we are</a></li>
 						<li><a href="#">Get in touch</a></li>
 					</ul>
-					<ul id="affiliates--mob-menu" class="sub-menu flex flex--column sub-menu--mob">
+					<ul id="affiliates--mob-menu" class="sub-menu flex flex--column sub-menu--mob hidden">
 						<div href="#" id="" class="affiliate__pretitle pretitle--log-in pretitle--forget-pass parent-link--back">
 							<img src="img/arrow-left.svg" alt="arrow left">
 							<span>Go back</span>
@@ -106,7 +123,7 @@
 						<li><a href="#">Rules</a></li>
 						<li><a href="#">Help Center</a></li>
 					</ul>
-					<ul id="advertises--mob-menu" class="sub-menu flex flex--column sub-menu--mob">
+					<ul id="advertises--mob-menu" class="sub-menu flex flex--column sub-menu--mob hidden">
 						<div href="#" id="" class="affiliate__pretitle pretitle--log-in pretitle--forget-pass parent-link--back">
 							<img src="img/arrow-left.svg" alt="arrow left">
 							<span>Go back</span>
@@ -169,15 +186,54 @@
 					<div class="form__title">Fill the form below</div>
 					<div class="form_inputs flex flex--row">
 						<div class="inputs-column flex flex--column">
-							<input type="text" class="input--text" placeholder="First name">
-							<input type="text" class="input--text" placeholder="Last name">
-							<input type="text" class="input--text" placeholder="E-mail">
-							<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
-							<label for="form-password"></label>
+							<div class="input-wrap relative">                                    
+								<input type="text" class="input--text" placeholder="First name" required>
+								<div class="input-texts">
+									<div class="input-text">Name</div>
+									<div class="input-text input-text--error">INVALID Name</div>
+								</div>
+							</div>
+							<div class="input-wrap relative">                                    
+								<input type="text" class="input--text" placeholder="Last name" required>
+								<div class="input-texts">
+									<div class="input-text">Last Name</div>
+									<div class="input-text input-text--error">INVALID Last Name</div>
+								</div>
+							</div>
+							<div class="input-wrap relative">                                    
+								<input type="text" class="input--text" placeholder="E-mail" required>
+								<div class="input-texts">
+									<div class="input-text">Email</div>
+									<div class="input-text input-text--error">INVALID Email</div>
+								</div>
+							</div>
+							<div class="input-wrap relative">                                    
+								<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
+								<label for="form-password"></label>
+								<div class="input-texts">
+									<div class="input-text">Password</div>
+									<div class="input-text input-text--error">INVALID Password</div>
+								</div>
+							</div>							
+							
 						</div>
 						<div class="inputs-column flex flex--column">
-							<input type="text" class="input--text" placeholder="Login">
-							<input type="text" class="input--text" placeholder="Link messenger">
+							<div class="input-wrap relative">                                    
+								<input type="text" class="input--text" placeholder="Login">
+								<div class="input-texts">
+									<div class="input-text"></div>
+									<div class="input-text input-text--error"></div>
+								</div>
+							</div>
+							<div class="input-wrap relative">                                    
+								<input type="text" class="input--text" placeholder="Link messenger">
+								<div class="input-texts">
+									<div class="input-text"></div>
+									<div class="input-text input-text--error"></div>
+								</div>
+							</div>
+							
+							
 						</div>
 						<div class="inputs-column flex flex--column">
 
@@ -212,19 +268,55 @@
 							<div class="form__title">Fill the form below</div>
 							<div class="form_inputs flex flex--row">
 								<div class="inputs-column flex flex--column">
-									<input type="text" class="input--text" placeholder="First name">
-									<input type="text" class="input--text" placeholder="Last name">
-									<input type="text" class="input--text" placeholder="E-mail">
-									<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
-									<label for="form-password"></label>
+									<div class="input-wrap relative">                                    
+										<input type="text" class="input--text" placeholder="First name" required>
+										<div class="input-texts">
+											<div class="input-text">Name</div>
+											<div class="input-text input-text--error">INVALID Name</div>
+										</div>
+									</div>
+									<div class="input-wrap relative">                                    
+										<input type="text" class="input--text" placeholder="Last name" required>
+										<div class="input-texts">
+											<div class="input-text">Last Name</div>
+											<div class="input-text input-text--error">INVALID Last Name</div>
+										</div>
+									</div>
+									<div class="input-wrap relative">                                    
+										<input type="text" class="input--text" placeholder="E-mail" required>
+										<div class="input-texts">
+											<div class="input-text">Email</div>
+											<div class="input-text input-text--error">INVALID Email</div>
+										</div>
+									</div>
+									<div class="input-wrap relative">                                    
+										<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
+										<label for="form-password"></label>
+										<div class="input-texts">
+											<div class="input-text">Password</div>
+											<div class="input-text input-text--error">INVALID Password</div>
+										</div>
+									</div>
 								</div>
 							</div>	
 						</div>
 						<div class="aff-slide--mob">
 							<div class="form_inputs flex flex--column">								
 								<div class="inputs-column flex flex--column" style="margin-bottom:9.66vw">
-									<input type="text" class="input--text" placeholder="Login">
-									<input type="text" class="input--text" placeholder="Link messenger">
+									<div class="input-wrap relative">                                    
+										<input type="text" class="input--text" placeholder="Login">
+										<div class="input-texts">
+											<div class="input-text"></div>
+											<div class="input-text input-text--error"></div>
+										</div>
+									</div>
+									<div class="input-wrap relative">                                    
+										<input type="text" class="input--text" placeholder="Link messenger">
+										<div class="input-texts">
+											<div class="input-text"></div>
+											<div class="input-text input-text--error"></div>
+										</div>
+									</div>
 								</div>
 								<div class="inputs-column flex flex--column">
 		
@@ -274,15 +366,51 @@
 					<div class="form__title">Fill the form below</div>
 					<div class="form_inputs flex flex--row">
 						<div class="inputs-column flex flex--column">
-							<input type="text" class="input--text" placeholder="First name">
-							<input type="text" class="input--text" placeholder="Last name">
-							<input type="text" class="input--text" placeholder="E-mail">
-							<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
-							<label for="form-password"></label>
+							<div class="input-wrap relative">                                    
+								<input type="text" class="input--text" placeholder="First name" required>
+								<div class="input-texts">
+									<div class="input-text">Name</div>
+									<div class="input-text input-text--error">INVALID Name</div>
+								</div>
+							</div>
+							<div class="input-wrap relative">                                    
+								<input type="text" class="input--text" placeholder="Last name" required>
+								<div class="input-texts">
+									<div class="input-text">Last Name</div>
+									<div class="input-text input-text--error">INVALID Last Name</div>
+								</div>
+							</div>
+							<div class="input-wrap relative">                                    
+								<input type="text" class="input--text" placeholder="E-mail" required>
+								<div class="input-texts">
+									<div class="input-text">Email</div>
+									<div class="input-text input-text--error">INVALID Email</div>
+								</div>
+							</div>
+							<div class="input-wrap relative">                                    
+								<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
+								<label for="form-password"></label>
+								<div class="input-texts">
+									<div class="input-text">Password</div>
+									<div class="input-text input-text--error">INVALID Password</div>
+								</div>
+							</div>
 						</div>
 						<div class="inputs-column flex flex--column">
-							<input type="text" class="input--text" placeholder="Website">
-							<input type="text" class="input--text" placeholder="Choose category">
+							<div class="input-wrap relative">                                    
+								<input type="text" class="input--text" placeholder="Login">
+								<div class="input-texts">
+									<div class="input-text"></div>
+									<div class="input-text input-text--error"></div>
+								</div>
+							</div>
+							<div class="input-wrap relative">                                    
+								<input type="text" class="input--text" placeholder="Link messenger">
+								<div class="input-texts">
+									<div class="input-text"></div>
+									<div class="input-text input-text--error"></div>
+								</div>
+							</div>
 						</div>
 						<div class="inputs-column flex flex--column">
 
@@ -2601,7 +2729,7 @@
                 <form action="" class="filter">
 
                     <div class="filter-group flex flex--column">
-                        <div class="main-filter">
+                        <div class="main-filter active">
                             <span>Main filter</span>
                             <img src="img/arrow-bottom.svg" alt="">
                         </div>

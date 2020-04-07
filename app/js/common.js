@@ -2,13 +2,6 @@ $(function() {
 	//Header Bg
 	$('.header__content').addClass('bgshow');
 
-	//SVG Fallback
-	if(!Modernizr.svg) {
-		$("img[src*='svg']").attr("src", function() {
-			return $(this).attr("src").replace(".svg", ".png");
-		});
-	}
-
 	//E-mail Ajax Send
 	//Documentation & Example: https://github.com/agragregra/uniMail
 	$("form").submit(function() { //Change
@@ -466,6 +459,64 @@ $(function() {
 		$('.features-slider').slick('slickNext');
 	})
 
+//Category slider
+	$('.cat-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: false,
+		infinite: false
+	})
+
+	let $catslider = $('.cat__nav');
+
+	$(".cat-slider").on("init reInit", function(event, slick){
+		$catslider.find('.amount-pages').html(parseInt(slick.slideCount));
+	})
+
+	$(".cat-slider").on("afterChange", function(event, slick, currentSlide){
+		$catslider.find('.current-page').fadeOut(200,'swing',function(){
+			$(this).html(parseInt(slick.currentSlide + 1))
+		}).fadeIn(200);
+	})
+
+	$('.cat__nav .left-arrow').click(function(){
+		$('.cat-slider').slick('slickPrev');
+	})
+	
+	$('.cat__nav .right-arrow').click(function(){
+		$('.cat-slider').slick('slickNext');
+	})
+
+//FAQ slider
+	$('.faq_slider-wrap').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: false,
+		infinite: false
+	})
+
+	let $faqlider = $('.faq__nav');
+
+	$(".faq_slider-wrap").on("init reInit", function(event, slick){
+		$faqlider.find('.amount-pages').html(parseInt(slick.slideCount));
+	})
+
+	$(".faq_slider-wrap").on("afterChange", function(event, slick, currentSlide){
+		$faqlider.find('.current-page').fadeOut(200,'swing',function(){
+			$(this).html(parseInt(slick.currentSlide + 1))
+		}).fadeIn(200);
+	})
+
+	$('.faq__nav .left-arrow').click(function(){
+		$('.faq_slider-wrap').slick('slickPrev');
+	})
+
+	$('.faq__nav .right-arrow').click(function(){
+		$('.faq_slider-wrap').slick('slickNext');
+	})
+
 //Filter mob
 	$('#advertiser-category-btn').click(function(){
 		$('.filter-btns').addClass('hidden');
@@ -615,7 +666,7 @@ $(function() {
 	});
 	$(".56").counter({
 		autoStart: true, // true/false, default: true
-		duration: 1, // milliseconds, default: 1500
+		duration: 2000, // milliseconds, default: 1500
 		countFrom: 0,// start counting at this number, default: 0
 		countTo: 56,// count to this number, default: 0
 		runOnce: true,// only run the counter once, default: false
