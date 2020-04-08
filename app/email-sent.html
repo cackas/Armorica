@@ -175,31 +175,31 @@
 				<div class="open-menu__left flex flex--column">
 					<ul class="open-open__list flex flex--column">
 						<li class="parent-link">
-							<a id="affiliates--mob" href="#">Affiliates</a>
-							<ul class="sub-menu flex flex--column">								
+							<a id="affiliates--mob" href="affiliate-we-offer.html">Affiliates</a>
+							<ul class="sub-menu flex flex--column hidden--mob">								
 								<li><a href="#">Dashboard</a></li>
 								<li><a href="#">Tools</a></li>
 								<li><a href="#">Business Models</a></li>
 								<li><a href="#">Rules</a></li>
-								<li><a href="#">Help Center</a></li>
+								<li><a href="affiliate-support.html">Help Center</a></li>
 							</ul>
 						</li>
 						<li class="parent-link">
-							<a id="advertises--mob" href="#">Advertises</a>
-							<ul class="sub-menu flex flex--column">
+							<a id="advertises--mob" href="advertise-we-offer.html">Advertises</a>
+							<ul class="sub-menu flex flex--column hidden--mob">
 								<li><a href="#">Dashboard</a></li>
 								<li><a href="#">Tools</a></li>
 								<li><a href="#">Business Models</a></li>
 								<li><a href="#">Rules</a></li>
-								<li><a href="#">Help Center</a></li>
+								<li><a href="advertise-support.html">Help Center</a></li>
 							</ul>
 						</li>
-						<li><a href="#">Programs</a></li>
+						<li><a href="programs-brands.html">Programs</a></li>
 						<li><a href="#">Testimonials</a></li>
 						<li><a href="#">Who we are</a></li>
 						<li><a href="#">Get in touch</a></li>
 					</ul>
-					<ul id="affiliates--mob-menu" class="sub-menu flex flex--column sub-menu--mob">
+					<ul id="affiliates--mob-menu" class="sub-menu flex flex--column sub-menu--mob hidden">
 						<div href="#" id="" class="affiliate__pretitle pretitle--log-in pretitle--forget-pass parent-link--back">
 							<img src="img/arrow-left.svg" alt="arrow left">
 							<span>Go back</span>
@@ -210,7 +210,7 @@
 						<li><a href="#">Rules</a></li>
 						<li><a href="#">Help Center</a></li>
 					</ul>
-					<ul id="advertises--mob-menu" class="sub-menu flex flex--column sub-menu--mob">
+					<ul id="advertises--mob-menu" class="sub-menu flex flex--column sub-menu--mob hidden">
 						<div href="#" id="" class="affiliate__pretitle pretitle--log-in pretitle--forget-pass parent-link--back">
 							<img src="img/arrow-left.svg" alt="arrow left">
 							<span>Go back</span>
@@ -496,7 +496,7 @@
 
 			</form>
 		</div>
-		<div id="log-in-popup" class="log-in-wrap relative open">
+		<div id="log-in-popup" class="log-in-wrap relative">
 			<div class="line first"></div>
 			<div class="line second"></div>
 			<div class="line third"></div>
@@ -538,9 +538,21 @@
 								<div class="form__title">Log in with E-mail</div>
 								<div class="form_inputs flex flex--row">
 									<div class="inputs-column flex flex--column">
-										<input type="text" class="input--text" placeholder="E-mail">
-										<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
-										<label for="form-password"></label>
+										<div class="input-wrap relative">                                    
+											<input type="text" class="input--text" placeholder="E-mail" required>
+											<div class="input-texts">
+												<div class="input-text">Email</div>
+												<div class="input-text input-text--error">INVALID Email</div>
+											</div>
+										</div>
+										<div class="input-wrap relative">                                    
+											<input type="password" name="" class="input--text input--password" placeholder="Password">
+											<label for="form-password"></label>
+											<div class="input-texts">
+												<div class="input-text">Password</div>
+												<div class="input-text input-text--error">INVALID Password</div>
+											</div>
+										</div>
 									</div>
 								</div>
 								<a href="#" id="forget-btn" class="forget-btn hidden--mob">Forgot Password or Username?</a>
@@ -579,7 +591,13 @@
 								<div class="form__title">Enter your E-mail</div>
 								<div class="form_inputs flex flex--row">
 									<div class="inputs-column flex flex--column">
-										<input type="text" class="input--text" placeholder="Your email address">
+										<div class="input-wrap relative">                                    
+											<input type="text" class="input--text" placeholder="E-mail" required>
+											<div class="input-texts">
+												<div class="input-text">Email</div>
+												<div class="input-text input-text--error">INVALID Email</div>
+											</div>
+										</div>
 									</div>
 								</div>
 								<a href="#" id="log-in-form-btn" class="btn affiliate-btn log-in-form-btn">Send message</a>
@@ -608,7 +626,14 @@
 								<div class="form__title">Create a new password</div>
 								<div class="form_inputs flex flex--row">
 									<div class="inputs-column flex flex--column">
-										<input type="password" name="" id="form-password" class="input--text input--password" placeholder="Password">
+										<div class="input-wrap relative">                                    
+											<input type="password" name="" class="input--text input--password" placeholder="Password">
+											<label for="form-password"></label>
+											<div class="input-texts">
+												<div class="input-text">Password</div>
+												<div class="input-text input-text--error">INVALID Password</div>
+											</div>
+										</div>
 									</div>
 								</div>
 								<a href="#" id="log-in-form-btn" class="btn affiliate-btn log-in-form-btn">Save Changes</a>
@@ -633,7 +658,11 @@
 								<a href="#" id="email-sent-ok-btn" class="btn affiliate-btn email-sent-ok-btn">Okay</a>
 								<a href="#" id="email-sent-btn" class="btn advertiser-btn email-sent-btn">Try to log in</a>
 							</div>
-						</form>
+						</form>					
+						<div class="not-reg-wrap flex flex--row">
+							<a href="#" class="log-in-btn accent">Sign up</a>
+							<span class="not-reg">If you are not registered yet</span>
+						</div>
 					</div>
 					<div class="pass-changed">
 						<div class="log-in__top flex flex--row">

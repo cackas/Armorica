@@ -87,6 +87,7 @@ body
 	overflow-x: hidden
 	&.unscrolled
 		height: 100vh
+		overflow: hidden
 a,a:hover,a:active
 	color: #01161E
 	text-decoration: none
@@ -143,12 +144,13 @@ header
 	max-height: calc(100vh - 100%)
 	height: calc(100vh - 100%)
 	top: 100%
-	z-index: 1
+	z-index: 2
 	background-color: #fff
 	background-image: url(../img/main-bg.svg)
 	background-repeat: no-repeat
 	background-size: 82.84vw 21.6vw
 	background-position: 8.37vw bottom
+	overflow: scroll
 	&.affiliate-popup--screen
 		background-image: url(../img/world.svg)
 		background-repeat: no-repeat
@@ -159,6 +161,7 @@ header
 .open-menu
 	position: relative
 	width: 100%
+	min-height: 100%
 	justify-content: space-between
 	align-items: flex-start
 	padding: 6.94vw 8.33vw 7.29vw
@@ -256,7 +259,6 @@ header
 			background-color: #019771
 		&:hover,&:active
 			color: #019771
-			font-weight: bolder
 			&:after
 				content: ''
 				transition: all .3s
@@ -549,9 +551,9 @@ header
 	align-items: flex-start
 	margin-bottom: 4.167vw
 .inputs-column
-	margin-right: 4.167vw
+	margin-right: 3.7vw
 	.input--text:last-child
-		margin-bottom: 0
+		//margin-bottom: 0
 .input--text
 	border: none	
 	outline: none
@@ -560,8 +562,12 @@ header
 	font-size: .97vw
 	line-height: 1.25vw
 	border: 1px solid rgba(1, 22, 30, 0.07)
-	margin-bottom: .69vw
+	//margin-bottom: .69vw
 	background-color: transparent
+	&:last-child
+		margin-bottom: 0
+.input-wrap
+	margin-bottom: .69vw
 	&:last-child
 		margin-bottom: 0
 .form__submit-wrap
@@ -597,27 +603,26 @@ header
 	opacity: .5
 .input--password
 	& + label
-		position: relative
-		&:after
-			content: ''
-			position: absolute
-			width: 1.11vw
-			height: .9vw
-			bottom: 1.63vw
-			right: 2vw
-			transform: translate(0,50%)
-			background-image: url(../img/password.svg)
-			background-position: 0 0
-			background-size: 100% 100%
+		position: absolute
+		width: 1.11vw
+		height: .9vw
+		bottom: 1.63vw
+		right: 2vw
+		transform: translate(0,50%)
+		background-image: url(../img/password.svg)
+		background-position: 0 0
+		background-size: 100% 100%
+			
 //Log in styles
 .log-in-wrap
 	display: none
 	position: absolute
 	width: 100%
+	height: 100vh
 	min-height: 100vh
 	top: 0
 	left: 0
-	z-index: 1
+	z-index: 2
 	&.open
 		display: inherit
 		.log-in__right
@@ -645,7 +650,8 @@ header
 	background-size: 100% 100%
 	background-repeat: no-repeat
 	transform: translateX(100%)
-	min-height: 100%	
+	min-height: 100%
+	overflow-y: scroll
 .forget-pass,.log-in,.change-pass,.email-sent,.pass-changed
 	animation: showFromRight .3s both
 .log-in__top

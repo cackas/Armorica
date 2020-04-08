@@ -232,6 +232,7 @@ $(function() {
 
 		$('.close--log-in').click(function(e){
 			e.preventDefault();
+			$('html').removeClass('unscrolled');
 			$('body').removeClass('unscrolled');
 			$('.log-in-wrap').fadeOut(200);
 			$('.log-in-wrap').removeClass('open');
@@ -564,7 +565,7 @@ $(function() {
 		$('.filter-wrap').removeClass('hidden');
 		$('footer').removeClass('hidden');
 	})
-//Scroll custom
+/*Scroll custom
 	$('body').niceScroll({
 		cursorcolor: "#019771",
 		background: '#F1F9F7'
@@ -572,7 +573,7 @@ $(function() {
 	$('.open-menu-wrap,.log-in-wrap').niceScroll({
 		cursorcolor: "#019771",
 		background: '#F1F9F7'
-	});
+	});*/
 //Inputs styles
 	$('input, textarea').focus(function(e){
 		$(this).addClass('touch');
