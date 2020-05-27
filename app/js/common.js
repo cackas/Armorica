@@ -677,7 +677,7 @@ $(function() {
 		function(number) {
 		  return "+" + number.toFixed();
 		}
-	});
+	})
 //Logo hover effect
 	$('#logo-svg').mouseenter(function(e){
 		$(this).find('.black-el').attr('fill', '#019771');
@@ -691,4 +691,18 @@ $(function() {
 	$('.main-filter').click(function(e){
 		$(this).toggleClass('active')
 	})
+//Stars fill
+	StarsFill()
+
+	function StarsFill(){
+		let ratings = $('.rating');
+		ratings.each( function( i, el ) {
+			let progressWidth = $( el ).children('.star__title').html(),
+				progressBar = $( el ).find('.progress');
+			console.log(progressWidth);
+			progressBar.css({ "background-color": "#019771", "width": progressWidth*10+"%"});
+		} )
+		//	progressWidth = progressBar.parents('.rating').children('.star__title').html();
+		//$('.progress').css({ "background-color": "#019771", "width": progressWidth*10+"%"})
+	}
 });

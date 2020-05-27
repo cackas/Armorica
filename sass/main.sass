@@ -868,12 +868,19 @@ header
 .stars
 	align-items: center
 	margin-right: .69vw
-.star
-	width: .97vw
-	height: .9vw
-	margin-right: .278vw
-	&:last-child
-		margin-right: 0
+	position: relative
+	.progress
+		position: absolute
+		left: 0
+		top: 0
+		height: 100%
+.stars-wrap
+	width: 7vw
+	height: 1vw
+	background-image: url(../img/star--empty-1.png)
+	background-size: auto 100%	
+	position: relative
+
 .star__title
 	font-family: "IbmplexsansBold"
 	text-transform: uppercase
