@@ -792,6 +792,19 @@ header
 	line-height: 1.94vw
 	
 //Brands slider styles
+.arrow
+	position: absolute
+	right: calc(100% + .41vw)
+	top: 50%
+	transform: translate(0,-50%)
+	width: .48vw
+	height: .83vw
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	&.arrow--down
+		background-image: url('../img/arrow--down.svg')
+	&.arrow--up
+		background-image: url('../img/arrow--up.svg')
 .brands-slider-wrap
 	padding: 0 0 0 8.33vw
 	margin-bottom: 6vw
@@ -848,6 +861,7 @@ header
 	font-size: 1.25vw
 	line-height: 1.59vw
 	min-width: 5.4vw
+	position: relative
 .rating
 	align-items: center
 	margin-bottom: .69vw
