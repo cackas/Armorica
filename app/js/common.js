@@ -343,6 +343,36 @@ $(function() {
 	})
 //End News slider
 
+//News mobile choose widget slider
+	$('#choose-widget__slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		dots: false,
+		infinite: false
+	})
+
+	let $widgetslider = $('#choose-widget__slider');
+
+	$("#choose-widget__slider").on("init reInit", function(event, slick){
+		$widgetslider.find('.amount-pages').html(parseInt(slick.slideCount));
+	})
+
+	$("#choose-widget__slider").on("afterChange", function(event, slick, currentSlide){
+		$widgetslider.find('.current-page').fadeOut(200,'swing',function(){
+			$(this).html(parseInt(slick.currentSlide + 1))
+		}).fadeIn(200);
+	})
+
+	$('.cat__nav .left-arrow').click(function(){
+		$('#choose-widget__slider').slick('slickPrev');
+	})
+
+	$('.cat__nav .right-arrow').click(function(){
+		$('#choose-widget__slider').slick('slickNext');
+	})
+//End News mobile choose widget slider
+
 //Mobile slider on main
 	let $mainMob = $('#page-numbers--main-mob');
 	$('#main-slider--mob').slick({
@@ -705,4 +735,45 @@ $(function() {
 		//	progressWidth = progressBar.parents('.rating').children('.star__title').html();
 		//$('.progress').css({ "background-color": "#019771", "width": progressWidth*10+"%"})
 	}
+//Search-widget btn
+ $("#choose-widget__btn").click(function(e){
+	 $(".choose-widget__menu").hide();
+	 $(".choose-widget__slider").show();
+
+ })
+ $("#clean__btn").click(function(e){
+	$("#choose-widget__btn").html('Choose Categories');
+	$(".choose-widget__input").prop('checked', false);
+ })
+
+ $("#choose-widget__cancel").click(function(e){
+	 $(".choose-widget__menu").show();
+	 $(".choose-widget__slider").hide();
+
+ })
+ $("#choose-widget__apply").click(function(e){
+	 
+	  var th = $("#choose-widget__slider"),
+	  	  thData = th.serializeArray();
+      $.ajax({
+		  type: "POST",
+          url: "mail.php",
+		  data: th.serialize(),
+		  beforeSend: function(){
+			console.log(thData);
+			$(".choose-widget__menu").show();
+			$(".choose-widget__slider").hide();
+			$("#choose-widget__btn").html(thData.length + ' choosed Categories');
+		  },
+		  success: function(e){
+			console.log(e)
+		  },
+		  error: function(e){
+			console.log(e)
+		  }
+      });
+      return false;
+
+ })
+//End search-widget btn
 });

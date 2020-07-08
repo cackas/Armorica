@@ -39,8 +39,11 @@
 	margin-bottom: 8.2vw;
 }
 .news-wrap {
-	flex-wrap: wrap;
-	justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .support-page__left--news {
 	padding: 0 6.5vw 0 8.33vw;
@@ -51,7 +54,9 @@
 }
 .filter--news {
 	width: 20.8vw;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .filter--news .filter__arrows, .filter--news .perpage-wrap {
 	margin-right: 0;
@@ -89,7 +94,9 @@
 	position: absolute;
 	top: 50%;
 	right: 0;
-	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
 	width: 2vw;
 	height: .9vw;
 	background-image: url(img/news-arrow.svg);
@@ -97,9 +104,90 @@
 	background-repeat: no-repeat;
 }
 .news__paggination {
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.choose-widget {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	text-transform: uppercase;
+	font-family: "IbmplexsansBold";
+	z-index: 1;
+}
+.choose-widget__menu {
+	width: 100%;
+	height: 11.59vw;
+}
+.choose-widget__btn {
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	text-align: center;
+	width: -webkit-fill-available;
+	font-size: 3.38vw;
+	line-height: 4.83vw;
+	cursor: pointer;
+}
+.clear-btn {
+	width: -webkit-fill-available;
+	background-color: #FEFEFE;
+	color: #666;
+}
+.chosen-btn {
+	background-color: #F1F9F7;
+	color: #019771;	
+}
+.search-btn {
+	width: 11.59vw;
+	min-width: 11.59vw;
+	background-color: #019771;	
+}
+.search-btn img {
+	width: 4.83vw;
+	height: 4.83vw;
+}
+.choose-widget {
+	display: none;
+}
+.choose-widget__slider {
+	display: none;
+	background-color: #fefefe;
+	padding: 9.66vw 10.6vw 9.66vw 7.24vw;
+}
+.choose-widget__slider .filter--select {
+	margin-bottom: 2.41vw;
+}
+.choose-widget__topics {
+	margin-bottom: 14.49vw;
+}
+.choose-widget__btns {
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.choose-widget__input {
+	display: none;
+}
+.choose-widget__input:checked + label {
+	border-left: 3px solid #019771;
 }
 @media only screen and (max-width:768px){
+	.choose-widget {
+		display: inherit;
+	}
 	.news {
 		width: 72.4vw;
 		margin-bottom: 14.4vw;
@@ -139,7 +227,7 @@
 	.news__info:after {
 		width: 7.24vw;
 		height: 3.14vw;
-	}
+	}	
 }
 </style>
 	<!-- Здесь пишем код -->
@@ -818,6 +906,78 @@
 		</div>
 	</header>
     <div class="landing">
+		<div class="choose-widget">
+			<div class="choose-widget__menu flex flex--row">
+				<div id="clean__btn" class="choose-widget__btn clear-btn flex">Clean all</div>
+				<div id="choose-widget__btn" class="choose-widget__btn chosen-btn flex">Choose Categories</div>
+				<div class="choose-widget__btn search-btn flex"><img src="img/search-btn.svg" class="img--response" alt=""></div>
+			</div>
+			<div class="choose-widget__slider">
+				<div class="topics__left">
+					<div class="form__title topics__title">Categories</div>
+					<form id="choose-widget__slider" class="topics_slider-wrap">
+						<div class="topics__slider flex flex--column">
+							<div class="flex flex--column">
+								<input id="choose-widget__cat-1" value="somedata" name="widget1" type="checkbox" class="choose-widget__input">
+								<label for="choose-widget__cat-1" class="topic input--text filter--select choose-widget__label">Basics</label>
+								<input id="choose-widget__cat-2" value="somedata" name="widget2" type="checkbox" class="choose-widget__input">
+								<label for="choose-widget__cat-2" class="topic input--text filter--select choose-widget__label">General information</label>
+								<input id="choose-widget__cat-3" value="somedata" name="widget3" type="checkbox" class="choose-widget__input">
+								<label for="choose-widget__cat-3" class="topic input--text filter--select choose-widget__label">Ad spaces</label>
+								<input id="choose-widget__cat-4" value="somedata" name="widget4" type="checkbox" class="choose-widget__input">
+								<label for="choose-widget__cat-4" class="topic input--text filter--select choose-widget__label">Programs</label>
+								<input id="choose-widget__cat-5" value="somedata" name="widget5" type="checkbox" class="choose-widget__input">
+								<label for="choose-widget__cat-5" class="topic input--text filter--select choose-widget__label">Finance</label>
+							</div>
+						</div>
+						<div class="topics__slider flex flex--column">
+							<div class="flex flex--column">
+								<input id="choose-widget__cat-6" value="somedata" name="widget6" type="checkbox" class="choose-widget__input">
+								<label for="choose-widget__cat-6" class="topic input--text filter--select choose-widget__label">Basics</label>
+								<input id="choose-widget__cat-7" value="somedata" name="widget7" type="checkbox" class="choose-widget__input">
+								<label for="choose-widget__cat-7" class="topic input--text filter--select choose-widget__label">General information</label>
+								<input id="choose-widget__cat-8" value="somedata" name="widget8" type="checkbox" class="choose-widget__input">
+								<label for="choose-widget__cat-8" class="topic input--text filter--select choose-widget__label">Ad spaces</label>
+								<input id="choose-widget__cat-9" value="somedata" name="widget9" type="checkbox" class="choose-widget__input">
+								<label for="choose-widget__cat-9" class="topic input--text filter--select choose-widget__label">Programs</label>
+								<input id="choose-widget__cat-10" value="somedata" name="widget10" type="checkbox" class="choose-widget__input">
+								<label for="choose-widget__cat-10" class="topic input--text filter--select choose-widget__label">Finance</label>
+							</div>
+						</div>
+						<div class="topics__slider flex flex--column">
+							<div class="flex flex--column">
+								<input id="choose-widget__cat-11" value="somedata" name="widget11" type="checkbox" class="choose-widget__input">
+								<label for="choose-widget__cat-11" class="topic input--text filter--select choose-widget__label">Basics</label>
+								<input id="choose-widget__cat-12" value="somedata" name="widget12" type="checkbox" class="choose-widget__input">
+								<label for="choose-widget__cat-12" class="topic input--text filter--select choose-widget__label">General information</label>
+								<input id="choose-widget__cat-13" value="somedata" name="widget13" type="checkbox" class="choose-widget__input">
+								<label for="choose-widget__cat-13" class="topic input--text filter--select choose-widget__label">Ad spaces</label>
+								<input id="choose-widget__cat-14" value="somedata" name="widget14" type="checkbox" class="choose-widget__input">
+								<label for="choose-widget__cat-14" class="topic input--text filter--select choose-widget__label">Programs</label>
+								<input id="choose-widget__cat-15" value="somedata" name="widget15" type="checkbox" class="choose-widget__input">
+								<label for="choose-widget__cat-15" class="topic input--text filter--select choose-widget__label">Finance</label>
+							</div>
+						</div>
+					</form>
+					<div class="topics__nav flex flex--row cat__nav choose-widget__topics">
+						<div class="page-numbers flex flex--row page-numbers--news">
+							<div class="current-page">1</div>
+							<div class="slash">/</div>
+							<div class="amount-pages">3</div>
+						</div>
+						<div class="news-slider__arrows flex flex--row">
+							<div class="left-arrow"><img src="img/news-left.svg" alt="" class="img--response"></div>
+							<div class="right-arrow"><img src="img/news-right.svg" alt="" class="img--response"></div>
+						</div>
+					</div>
+					<div class="choose-widget__btns flex flex--row">
+						<div id="choose-widget__cancel" class="btn advertiser-btn">cancel</div>
+						<div id="choose-widget__apply" class="btn affiliate-btn">apply</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
         <div class="we-are-diffent--block">
 			<div class="line first"></div>
 			<div class="line second"></div>
